@@ -1,0 +1,58 @@
+<style>
+	.top { border-top: 1px solid #444; }
+	.right { border-right: 1px solid #444; }
+	.bottom { border-bottom: 1px solid #444; }
+	.left { border-left: 1px solid #444; }
+</style>
+<pre id="p"></pre>
+<script>
+	var x = 50;
+	var y = 25;
+	var numCells = x * y;
+	var s = "", i, j;
+
+	for(i = 0; i < y; i++) {
+		s += '<br style="clear:both">';
+		for(j = 0; j < x; j++) {
+			s += '<div style="float:left; padding: 9px;"></div>';
+		}
+	}
+	p.innerHTML = s;
+	
+	var cells = document.getElementsByTagName('div');
+	var currentCell = cells[0];
+	i = 0;
+	while(i < 10) {
+		// check neighbors
+		var neighbors = [ cells[i-x], cells[i+1], cells[i+x], cells[i-1] ];
+		if(neighbors[0] && neighbors[0].className.indexOf('top') > -1) 		neighbors[0] = undefined;
+		if(neighbors[1] && neighbors[1].className.indexOf('right') > -1) 	neighbors[1] = undefined;
+		if(neighbors[2] && neighbors[2].className.indexOf('bottom') > -1) 	neighbors[2] = undefined;
+		if(neighbors[3] && neighbors[3].className.indexOf('left') > -1) 	neighbors[3] = undefined;
+
+		if(! neighbors[0] && ! neighbors[1] && ! neighbors[2] && ! neighbors[3]) {
+			break;
+		}
+
+		j = -1;
+		while(! neighbors[j]) {
+			j = Math.floor(Math.random() * (3 - 0 + 1)) + 0;
+		}
+
+		currentCell.className += ' '+ getClassname(j);
+		currentCell = neighbors[j];
+
+		console.log(i, j, neighbors, neighbors[j]);
+
+		i++;
+	}
+
+	function getClassname(n) {
+		switch(n) {
+			case 0: return 'right bottom left';
+			case 1: return 'top bottom left';
+			case 2: return 'top right left';
+			case 3: return 'top right bottom';
+		}
+	}
+</script>
