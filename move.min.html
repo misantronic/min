@@ -1,12 +1,12 @@
-<pre id="z"style="line-height:150%;font-size:20px;"></pre>
+<pre id="z">
 <script>(function(p,b,e,w){
 	function d(){
 		s="";i=0;
 		while(i<e){
 			if(i%b==0)s+='<br>';
-			r=!!0;u="&nbsp;";
-			for(y in w)if(w[y]==i)s+=u+"█"+u,r=!0;
-			s+=i==p?" ✖ ":r==!!0?u+u+u:'';
+			r=0;u="&nbsp;";
+			for(y in w)if(w[y]==i)s+=u+"█"+u,r=1;
+			s+=i==p?" ✖ ":!r?u+u+u:'';
 			i++;
 		}
 		z.innerHTML=s;
