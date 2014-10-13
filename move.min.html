@@ -1,22 +1,33 @@
 <pre id="z">
 <script>(function(p,b,e,w){
+	q=9;x=0;k=0;
 	function d(){
 		s="";i=0;
-		while(i<e){
+		for(;i<e;){
 			if(i%b==0)s+='<br>';
 			r=0;u="&nbsp;";
-			for(y in w)if(w[y]==i)s+=u+"█"+u,r=1;
-			s+=i==p?" ✖ ":!r?u+u+u:'';
+			for(y in w)if(w[y]==i)s+=u+"|"+u,r=1;
+			s+=i==p?" > ":q==i?' * ':!r?u+u+u:'';
 			i++;
 		}
-		z.innerHTML=s;
+		z.innerHTML=s+"<br>Points: "+x;
 	}
+
 	onkeyup=function(e){
 		h=e.which;
 		g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;
-		if(!c(g)&&g)p=g,d();
+		if(!~w.indexOf(g))p=g;
+		if(q==g){x+=10;l()}
+		d()
 	}
-	function c(f){
-		for(i in w)if(w[i]==f)return 1;return 0;
-	}d();
-})(0,15,255,[5,20,35,50,65,70,85,100,115,130,145,160,175,91,106,121,136,151,166,125,140,155,170,254,239,224,209,194]);</script>
+	a=Math.random;
+	function m(){
+		q=~~(a()*(e+1));d()
+	}
+	function l(){
+		m();
+		clearInterval(k);
+		k=setInterval(function(){m();d()},4e3);
+	}
+	d();
+})(0,15,255,[3,18,33,48,63,85,100,115,130,156,171,186,201,216]);</script>
