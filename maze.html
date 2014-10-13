@@ -1,58 +1,38 @@
-<style>
-	.top { border-top: 1px solid #444; }
-	.right { border-right: 1px solid #444; }
-	.bottom { border-bottom: 1px solid #444; }
-	.left { border-left: 1px solid #444; }
-</style>
-<pre id="p"></pre>
-<script>
-	var x = 50;
-	var y = 25;
-	var numCells = x * y;
-	var s = "", i, j;
-
-	for(i = 0; i < y; i++) {
-		s += '<br style="clear:both">';
-		for(j = 0; j < x; j++) {
-			s += '<div style="float:left; padding: 9px;"></div>';
-		}
+<tt id=z>
+<script>(function(x,y,c,u,i,j,s){
+for(;i<y;i++){
+	c[i]=[];u[i]=[];
+	for(j=0;j<x;j++){
+		c[i][j]=[0,0,0,0];
+		u[i][j]=1;
 	}
-	p.innerHTML = s;
-	
-	var cells = document.getElementsByTagName('div');
-	var currentCell = cells[0];
-	i = 0;
-	while(i < 10) {
-		// check neighbors
-		var neighbors = [ cells[i-x], cells[i+1], cells[i+x], cells[i-1] ];
-		if(neighbors[0] && neighbors[0].className.indexOf('top') > -1) 		neighbors[0] = undefined;
-		if(neighbors[1] && neighbors[1].className.indexOf('right') > -1) 	neighbors[1] = undefined;
-		if(neighbors[2] && neighbors[2].className.indexOf('bottom') > -1) 	neighbors[2] = undefined;
-		if(neighbors[3] && neighbors[3].className.indexOf('left') > -1) 	neighbors[3] = undefined;
-
-		if(! neighbors[0] && ! neighbors[1] && ! neighbors[2] && ! neighbors[3]) {
-			break;
-		}
-
-		j = -1;
-		while(! neighbors[j]) {
-			j = Math.floor(Math.random() * (3 - 0 + 1)) + 0;
-		}
-
-		currentCell.className += ' '+ getClassname(j);
-		currentCell = neighbors[j];
-
-		console.log(i, j, neighbors, neighbors[j]);
-
-		i++;
+}
+r=Math.random;v=1;d=[~~(r()*y),~~(r()*x)];p=[d];u[d[0]][d[1]]=0;
+while(v<x*y){
+	j=d[0];k=d[1];
+	q=[[j-1,k,0,2],[j,k+1,1,3],[j+1,k,2,0],[j,k-1,3,1]];n=[];
+	for(i=0;i<4;i++){
+		b=q[i];e=b[1];f=b[0];
+		if(f>-1&&f<y&&e>-1&&e<x&&u[f][e])
+			n.push(q[i]);
 	}
-
-	function getClassname(n) {
-		switch(n) {
-			case 0: return 'right bottom left';
-			case 1: return 'top bottom left';
-			case 2: return 'top right left';
-			case 3: return 'top right bottom';
-		}
+	if(n.length){
+		b=n[~~(r()*n.length)];
+		h=b[0];l=b[1];
+		c[j][k][b[2]]=1;
+		c[h][l][b[3]]=1;
+		u[h][l]=0;
+		v++;
+		p.push(d=[h,l]);
+	}else d=p.pop();
+}
+for(y in c){
+	s+='<br style=clear:both>';
+	for(x in c[y]){
+		w=[0,0,0,0];e=c[y][x];
+		if(e[0])w[0]=1;if(e[1])w[1]=1;if(e[2])w[2]=1;if(e[3])w[3]=1;
+		s+='<b style="float:left;width:15px;height:15px;box-sizing:border-box;border-style:solid;border-width:'+w.join("px ")+'"></b>';
 	}
-</script>
+}
+z.innerHTML=s;
+})(30,20,[],[],0,0,'');</script>
