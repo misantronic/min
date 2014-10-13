@@ -15,13 +15,7 @@
 		h=e.which;
 		g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;
 		if(!~w.indexOf(g))p=g;
-		if(q==g){
-			x+=10;
-			a-=1e3;
-			m();
-			n(k);
-			k=o(function(){m();d()},3e3);
-		}
+		if(q==g)x+=10,a-=1e3,m(),n(k),k=o(function(){m();d()},3e3);
 		d()
 	}
 	function m(){
