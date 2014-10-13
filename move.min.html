@@ -17,17 +17,12 @@
 		h=e.which;
 		g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;
 		if(!~w.indexOf(g))p=g;
-		if(q==g){x+=10;l()}
+		if(q==g){x+=10;m();clearInterval(k);k=setInterval(function(){m();d()},4e3);}
 		d()
 	}
 	a=Math.random;
 	function m(){
 		q=~~(a()*(e+1));d()
-	}
-	function l(){
-		m();
-		clearInterval(k);
-		k=setInterval(function(){m();d()},4e3);
 	}
 	d();
 })(0,15,255,[3,18,33,48,63,85,100,115,130,156,171,186,201,216]);</script>
