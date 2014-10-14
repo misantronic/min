@@ -3,16 +3,16 @@
 	function d(){
 		s="";
 		for(i=0;i<e;i++){
-			if(i^0&&i%b==0)s+="\n";r=0;
-			for(y in w)if(w[y]==i)s+=".|.",r=1;
-			s+=i==p?" > ":q==i?' ° ':!r?'...':''
+			if(i%b==0)s+="\n";r=0;
+			for(y in w)if(w[y]==i)s+="#|#",r++;
+			s+=i==p?" > ":q==i?' ○ ':!r?'...':''
 		}
 		z.innerHTML=s+"\nP: "+x+"\t\t\t\tO₂: "+~~((1-a/T)*100)+"%";
 	}
 	onkeyup=function(e){
 		h=e.which;
 		g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;
-		if(!~w.indexOf(g))p=g;
+		if(!~w.indexOf(g))p=g;else p=0;
 		if(q==g)x+=5,a-=S,m(),n(k),k=o(function(){m();d()},3e3);
 		d()
 	}
@@ -21,8 +21,8 @@
 	}
 	d();
 
-	o(function(){
+	/*o(function(){
 		a+=S;
 		if(a>=T)n(k),onkeyup=0,a=T,d(); else d();
-	},S)
-})(setInterval,clearInterval,6e4,1e3,0,9,0,0,0,15,255,[3,18,33,48,63,85,100,115,130,156,171,186,201,216]);</script>
+	},S)*/
+})(setInterval,clearInterval,6e4,1e3,0,100,0,0,0,15,255,[3,18,33,48,63,85,100,115,130,156,171,186,201,216]);</script>
