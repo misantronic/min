@@ -1,79 +1,38 @@
-<pre id="p" style="line-height: 150%; font-size: 20px;"></pre>
-<script>
-	var pos = 0,
-			br = 15,
-			chars = 255,
-			walls = [
-				5, 20, 35, 50, 65,
-				70, 85, 100, 115, 130, 145, 160, 175,
-				91, 106, 121, 136, 151, 166,
-				125, 140, 155, 170,
-				254, 239, 224, 209, 194
-			];
-
-	function draw() {
-		var s = "";
-		var i = 0;
-
-		while(i<chars) {
-			// break
-			if(i % br == 0) s += '<br>';
-
-			// place walls
-			var wallSet = false;
-			walls.forEach(function(wall) {
-				if(wall == i) {
-					s += "&nbsp;█&nbsp;";
-					wallSet = true;
-				}
-			});
-
-			// set player or floor
-			if(i == pos)
-				s += " ✖ ";
-			else if(! wallSet)
-				s += "&nbsp;&nbsp;&nbsp;";
-
-			i++;
-		}
-		p.innerHTML = s;
+<pre style=border:solid;width:350px id=z>
+<script>(function(_,o,n,T,S,a,q,x,k,p,b,e,w){
+for(i=0,P=r();i<24;i++){
+	while(~w[_](P)||P==q||!P)P=r();
+	w[i]=P
+}
+function r(){
+	return~~(Math.random()*(e+1))
+}
+function d(){
+	s='';q<0&&(q=e);p<0&&(p=e);p>e&&(p=e-b);
+	for(i=0;i<e;i++){
+		if(i^0&&i%b==0)s+="\n";R=0;
+		for(y in w)if(w[y]==i)s+="<font color=green>~|~</font>",R++;
+		s+=i==p?" > ":q==i?' o ':!R?'   ':''
 	}
-
-	onkeyup = move = function(e) {
-		var newPos = 0;
-
-		// get direction
-		if(e.keyCode == 39) { // right
-			newPos = pos + 1;
-		}
-
-		if(e.keyCode == 37) { // left
-			newPos = pos - 1;
-		}
-
-		if(e.keyCode == 40) { // down
-			newPos = pos + br;
-		}
-
-		if(e.keyCode == 38) { // up
-			newPos = pos - br;
-		}
-
-		console.log("move: from ", pos, " to ", newPos);
-		// detect collision
-		if(! collision(newPos) && newPos) {
-			pos = newPos;
-			draw();
-		}
-	};
-
-	collision = function(field) {
-		for(var i=0; i < walls.length; i++) {
-			if(walls[i] == field) return true;
-		}
-		return false;
-	};
-
-	draw();
-
-</script>
+	z.innerHTML=s+"\n P: "+x+"\t\t\t\t    O2: "+~~((1-a/T)*100)+"%"
+}
+onkeyup=function(e){
+	h=e.which;
+	g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;
+	if(!~w[_](g))p=g;
+	if(q==g)x+=5,a-=S,m(),n(k),k=o(function(){m();d()},3e3);
+	d()
+};
+function m(){
+	q=w[0];
+	while(~w[_](q))q=r();d()
+}
+d();
+o(function(){
+	a+=S;
+	if(a>=T)n(k),onkeyup=0,a=T,d(); else {
+		for(i in w)w[i]=w[i]-1<0?e:w[i]-1,w[i]==q&&(q--),w[i]==p&&(p--);
+		d();
+	}
+},S)
+})("indexOf",setInterval,clearInterval,6e4,1e3,0,5,0,0,0,15,255,[]);</script>
