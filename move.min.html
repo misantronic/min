@@ -6,10 +6,9 @@
 			if(i%b==0)s+='<br>';
 			r=0;
 			for(y in w)if(w[y]==i)s+=u+"|"+u,r=1;
-			s+=i==p?" > ":q==i?' * ':!r?u+u+u:'';
-			i++;
+			s+=i==p?" > ":q==i++?' * ':!r?u+u+u:'';
 		}
-		z.innerHTML=s+"<br>"+"P: "+x+"\t\t\t\tO₂: "+~~((1-a/6e4)*100)+"%";
+		z.innerHTML=s+"<br>P: "+x+"\t\t\t\tO₂: "+~~((1-a/6e4)*100)+"%";
 	}
 	onkeyup=function(e){
 		h=e.which;
