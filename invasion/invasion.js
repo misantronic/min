@@ -12,6 +12,6 @@ setInterval(function(){
 		_+=i==p?"oIo":~b[n](i)?" x ":i==l&&l?" | ":c
 	}
 	document.body.innerHTML=_+="\n.P "+$;
-	for(i=0;i<28;i++)b[i]+=t^0&&t%5e3==0?20:t%2e3==0?1:t%1e3==0&&(-1);
+	for(i in b)b[i]+=t^0&&t%5e3==0?20:t%2e3==0?1:t%1e3==0&&(-1);
 	t+=o
 },o=50);
