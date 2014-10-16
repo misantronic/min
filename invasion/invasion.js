@@ -13,5 +13,5 @@ setInterval(function(){
 	}
 	document.body.innerHTML=_+="\n.P "+$;
 	for(var i=0;i<b.length;i++)b[i]+=t^0&&t%5e3==0?y:t%2e3==0?1:t%1e3==0&&(-1);
-	t+=50
-},50);
+	t+=o
+},o=50);
