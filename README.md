@@ -3,7 +3,7 @@ min
 
 Playground for my [code golf] projects
 
-  - [Invas!on] invaders from outer spacing coming to kill your mom!
+  - [Invas!on] (512b) invaders from outer spacing coming to kill your mom!
   - [HyperHydration] collect underwater-bubbles to stay alive. Oxygen is runnin' low! 
   - [Maze] randomly generated maze
   - [Random Range] generate a random integer from min to max
