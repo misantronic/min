@@ -1,5 +1,4 @@
 p=389;$=l=t=0;c="...";
-for(b=[],j=2;j<136;j+=2)b.push(j),j==14&&(j=41)||j==55&&(j=80)||j==94&&(j=121);
 onkeydown=function(e){
 	(k=e.which)==39?p++:k==37?p--:!l&&(l=p)
 };
@@ -15,3 +14,4 @@ setInterval(function(){
 	for(i in b)b[i]+=t^0&&t%5e3==0?20:t%2e3==0?1:t%1e3==0&&(-1);
 	t+=o
 },o=50);
+for(b=[],j=2;j<136;j+=2)b.push(j),j==14&&(j=41)||j==55&&(j=80)||j==94&&(j=121)
