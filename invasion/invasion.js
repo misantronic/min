@@ -10,7 +10,7 @@ setInterval(function(){
 		if(~b[n](p))p=n,b=[],c="xxx";
 		_+=i==p?"oIo":~b[n](i)?" x ":i==l&&l?" | ":c
 	}
-	document.body.innerHTML=_+="\n.P "+$;
+	document.body.innerHTML=_+="\nP "+$;
 	for(i in b)b[i]+=t^0&&t%5e3==0?20:t%2e3==0?1:t%1e3==0&&(-1);
 	t+=o
 },o=50);
