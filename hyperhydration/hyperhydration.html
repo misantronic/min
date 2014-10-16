@@ -11,7 +11,7 @@ function d(){
 	s='';q<0&&(q=e);p<0&&(p=e);p>e&&(p=e-b);
 	for(i=0;i<e;i++){
 		if(i^0&&i%b==0)s+="\n";R=0;
-		for(y in w)if(w[y]==i)s+="<font color=green>~|~</font>",R++;
+		for(y in w)if(w[y]==i)s+="~|~",R++;
 		s+=i==p?" > ":q==i?' o ':!R?'   ':''
 	}
 	z.innerHTML=s+"\n P: "+x+"\t\t\t\t    O2: "+~~((1-a/T)*100)+"%"
