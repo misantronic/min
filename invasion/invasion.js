@@ -4,11 +4,11 @@ onkeydown=function(e){
 	(k=e.which)==39?p++:k==37?p--:!l&&(l=p)
 };
 setInterval(function(){
-	_="<pre>";if(l)(l-=20)<0&&(l=0);
+	_="<pre>";l&&(l-=20)<0&&(l=0);
 	for(i=0;i<400;i++){
 		if(i%20==0)_+="\n";
 		if(~b[n](l))b.splice(b[n](l),1),$+=25,l=0;
-		if(~b[n](p))p=-1,b=[],c="xxx";
+		if(~b[n](p))p=n,b=[],c="xxx";
 		_+=i==p?"oIo":~b[n](i)?" x ":i==l&&l?" | ":c
 	}
 	document.body.innerHTML=_+="\n.P "+$;
