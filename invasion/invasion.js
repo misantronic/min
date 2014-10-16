@@ -1,4 +1,4 @@
-p=389;$=l=t=0;c="...";
+p=389;$=l=t=0;c=" _ ";
 onkeydown=function(e){
 	(k=e.which)==39?p++:k==37?p--:!l&&(l=p)
 };
@@ -8,7 +8,7 @@ setInterval(function(){
 		if(i%20==0)_+="\n";
 		if(~b[n="indexOf"](l))b.splice(b[n](l),1),$+=25,l=0;
 		if(~b[n](p))p=n,b=[],c="xxx";
-		_+=i==p?"oIo":~b[n](i)?" x ":i==l&&l?" | ":c
+		_+=i==p?"oIo":~b[n](i)?".#.":i==l&&l?" | ":c
 	}
 	document.body.innerHTML=_+="\nP "+$;
 	for(i in b)b[i]+=t^0&&t%5e3==0?20:t%2e3==0?1:t%1e3==0&&(-1);
