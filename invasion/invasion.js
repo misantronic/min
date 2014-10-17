@@ -1,7 +1,7 @@
 p=389;$=l=m=t=0;c=" _ ";
-onkeydown=function(e){(k=e.which)==39?p++:k==37?p--:!l&&(l=p)};
+onkeydown=function(e){(k=e.which)==39?p++:k==37?p--:!l&(l=p)};
 setInterval(function(){
-	_="<pre>";l&&(l-=20)<0&&(l=0);
+	_="<pre>";l&(l-=20)<0&&(l=0);
 	m&&(m+=20)>399&&(m=0);
 	if(!m)m=b[+new Date%6];
 	for(i=0;i<400;i++){
