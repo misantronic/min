@@ -1,12 +1,14 @@
-p=389;$=l=t=0;c=" _ ";
+p=389;$=l=m=t=0;c=" _ ";
 onkeydown=function(e){(k=e.which)==39?p++:k==37?p--:!l&&(l=p)};
 setInterval(function(){
 	_="<pre>";l&&(l-=20)<0&&(l=0);
+	m&&(m+=20)>399&&(m=0);
+	if(!m)m=b[+new Date%6];
 	for(i=0;i<400;i++){
 		if(i%20==0)_+="\n";
 		if(~b[n="indexOf"](l))b.splice(b[n](l),1),$+=25,l=0;
-		if(~b[n](p))p=n,b=[],c="xxx";
-		_+=i==p?"oIo":~b[n](i)?".#.":i==l&&l?" | ":c
+		if(~b[n](p)||p==m)p=n,b=[],c="xxx";
+		_+=i==p?"oIo":~b[n](i)?".#.":i==m&&m?' * ':i==l&&l?" | ":c
 	}
 	document.body.innerHTML=_+="\nP "+$;
 	t+=o;
