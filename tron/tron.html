@@ -3,9 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tron1k</title>
+	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			background: #111;
+			text-align: center;
+		}
+
+		h1 {
+			color: deeppink;
+			height: 32px;
+			font-family: 'Orbitron', sans-serif;
+		}
+
+		canvas {
+			border: 10px solid #fff;
+			padding: 4px;
+			background: #000;
+		}
+	</style>
 </head>
-<body bgcolor="#111" style="text-align: center;">
-	<canvas id="c" width="800" height="400" style="border: 10px solid #fff; padding: 4px; background: #000;"></canvas>
+<body>
+	<h1>Tron</h1>
+	<canvas id="c" width="800" height="400"></canvas>
 	<script src="tron.js"></script>
 </body>
 </html>
