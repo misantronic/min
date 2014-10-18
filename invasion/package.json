@@ -1,6 +1,6 @@
 {
 	"name": "Invas!on",
-	"description": "Space Invaders Clone in less than 500 bytes",
+	"description": "Space Invaders Clone in less than 512 bytes",
 	"keywords": [
 		"game",
 		"javascript",
