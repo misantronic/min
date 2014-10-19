@@ -35,11 +35,7 @@ with(c.getContext("2d")){
 		h.x+=g==2?L:g==4&&-L;
 		h.y+=g==3?L:g==1&&-L;
 
-		if(F.filter(t,h).length||f.filter(t,h).length){
-			return X=1
-		}
-
-		f.push({x:h.x,y:h.y});
+		if(F.filter(t,h).length||f.filter(t,h).length)return X=1;
 
 		strokeStyle=_=createLinearGradient(0,0,800,0);
 		_[$="addColorStop"](b,"magenta");
@@ -47,7 +43,7 @@ with(c.getContext("2d")){
 		_[$](.6,"#FF1493");
 		_[$](!b,c);
 
-		for(i=f.length-1;i--;){
+		for(i=f.push({x:h.x,y:h.y})-1;i--;){
 			lineTo(f[i].x,f[i].y)
 		}
 		stroke();
