@@ -10,8 +10,8 @@ with(c.getContext("2d")){
 		W=[{x:5,y:0}];D=3;// player 2
 		v=setInterval('\
 			c.width=c.width;\
-			p1[H="innerHTML"]=(A+=z(w,d,W,"blue",0,A));\
-			p2[H]=(a+=z(W,D,w,"red",1,a));\
+			p1[H="innerHTML"]=(A+=z(w,d,W,"blue",0));\
+			p2[H]=(a+=z(W,D,w,"red",1));\
 		',60)
 	};S();
 
@@ -20,7 +20,7 @@ with(c.getContext("2d")){
 	// F: enemy wall
 	// c: color
 	// b: start index (for gradient)
-	z=function(f,g,F,c,b,p){
+	z=function(f,g,F,c,b){
 		t=function(o){
 			return o.x==(T=this).x&&o.y==T.y
 		};
