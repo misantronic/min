@@ -12,6 +12,7 @@ with(c.getContext("2d")){
 			c.width=c.width;\
 			p1[H="innerHTML"]=(A+=z(w,d,W,"blue",0));\
 			p2[H]=(a+=z(W,D,w,"red",1));\
+			if(X)clearInterval(v)\
 		',60)
 	};S();
 
@@ -35,7 +36,6 @@ with(c.getContext("2d")){
 		h.y+=g==3?L:g==1&&-L;
 
 		if(F.filter(t,h).length||f.filter(t,h).length){
-			clearInterval(v);
 			return X=1
 		}
 
