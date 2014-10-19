@@ -26,7 +26,7 @@ with(c.getContext("2d")){
 			return o.x==(T=this).x&o.y==T.y
 		};
 
-		l=f.length-1;
+		l=f[I="length"]-1;
 		h={x:f[l].x,y:f[l].y};
 
 		beginPath();
@@ -35,7 +35,7 @@ with(c.getContext("2d")){
 		h.x+=g==2?L:g==4&&-L;
 		h.y+=g==3?L:g==1&&-L;
 
-		if(F[I=filter](t,h).length||f[I](t,h).length)return X=1;
+		if(F.filter(t,h)[I]||f.filter(t,h)[I])return X=1;
 
 		strokeStyle=_=createLinearGradient(0,0,800,0);
 		_[$="addColorStop"](b,"magenta");
