@@ -35,7 +35,7 @@ with(c.getContext("2d")){
 		h.x+=g==2?L:g==4&&-L;
 		h.y+=g==3?L:g==1&&-L;
 
-		if(F.filter(t,h).length||f.filter(t,h).length)return X=1;
+		if(F[I=filter](t,h).length||f[I](t,h).length)return X=1;
 
 		strokeStyle=_=createLinearGradient(0,0,800,0);
 		_[$="addColorStop"](b,"magenta");
