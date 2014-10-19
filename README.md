@@ -10,8 +10,8 @@ Playground for my [code golf] projects
   - [RGB2HEX] Convert RGB to HEX (< 140 bytes)
 
 [code golf]:http://en.wikipedia.org/wiki/Code_golf
-[Invas!on]:https://github.com/misantronic/min/tree/master/invasion
+[Invas!on]:https://rawgit.com/misantronic/min/master/invasion/invasion.html
 [HyperHydration]:https://github.com/misantronic/min/tree/master/hyperhydration
 [Random Range]:https://github.com/misantronic/min/tree/master/random_range
 [RGB2HEX]:https://github.com/misantronic/min/tree/master/random_range
-[Tron]:https://github.com/misantronic/min/tree/master/tron
+[Tron]:https://rawgit.com/misantronic/min/master/tron/tron.html
