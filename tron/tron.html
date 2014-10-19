@@ -7,13 +7,15 @@
 	<style>
 		body {
 			background: #111;
+			font-family: 'Orbitron', sans-serif;
+			color: deeppink;
 			text-align: center;
+			line-height: 150%;
 		}
 
 		h1 {
-			color: deeppink;
+
 			height: 32px;
-			font-family: 'Orbitron', sans-serif;
 		}
 
 		canvas {
@@ -21,11 +23,37 @@
 			padding: 4px;
 			background: #000;
 		}
+
+		#wrapper {
+			width: 830px;
+			margin: 0 auto;
+		}
+
+		#p1 {
+			float:left;
+		}
+
+		#p2 {
+			float:right;
+		}
+
+		p {
+			font-family: 'Courier New', sans-serif;
+		}
 	</style>
 </head>
 <body>
 	<h1>TRON</h1>
-	<canvas id="c" width="800" height="400"></canvas>
-	<script src="tron.js"></script>
+	<div id="wrapper">
+		<b id="p1">0</b>
+		<b id="p2">0</b>
+		<canvas id="c" width="800" height="400"></canvas>
+		<p>
+			Player 1: Use arrow keys<br>
+			Player 2: Use W A S D<br>
+			Press SPACE to restart
+		</p>
+		<script src="tron.js"></script>
+	</div>
 </body>
 </html>
