@@ -1,7 +1,8 @@
 min
 =========
 
-Playground for my [code golf] projects
+Playground for my [code golf] projects.
+Coding great stuff with as few and tiny code as possible!
 
   - [Invas!on] invaders from outer spacing coming to kill your mom! (~500 bytes)
   - [Tron] destroy your friends! competitive 1on1 tron clone. (<800 bytes)
