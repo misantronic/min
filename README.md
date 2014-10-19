@@ -1,7 +1,7 @@
 min
 =========
 
-Playground for my [code golf] projects.
+Playground for my [code golf] projects.<br>
 Coding great stuff with as few and tiny code as possible!
 
   - [Invas!on] invaders from outer spacing coming to kill your mom! (~500 bytes)
