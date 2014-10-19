@@ -11,7 +11,7 @@ Playground for my [code golf] projects
 
 [code golf]:http://en.wikipedia.org/wiki/Code_golf
 [Invas!on]:https://rawgit.com/misantronic/min/master/invasion/invasion.html
-[HyperHydration]:https://github.com/misantronic/min/tree/master/hyperhydration
+[HyperHydration]:https://rawgit.com/misantronic/min/master/hyperhydration/hyperhydration.html
 [Random Range]:https://github.com/misantronic/min/tree/master/random_range
 [RGB2HEX]:https://github.com/misantronic/min/tree/master/random_range
 [Tron]:https://rawgit.com/misantronic/min/master/tron/tron.html
