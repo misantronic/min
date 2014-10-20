@@ -13,7 +13,7 @@ exOf"](l))b.splice(b[n](l),1),$+=5,l=0;if(~b[n](p)||p==m)p=n,b=[],c="xxx";_+=i==
 oIo":~b[n](i)?".#.":i==m&amp;&amp;m?" * ":i==l&amp;&amp;l?" | ":c}document.body.inn
 erHTML=_+="\nP "+$;t+=o;for(i in b)b[i]+=t%5e3==0?20:t%2e3==0?1:t%1e3==0&amp;&amp;-
 1',o=50);for(b=[],j=2;j&lt;136;j+=j==14||j==94?29:j==55?27:2)b.push(j)</code></pre>
-[Invasion Hack] by @[aemkei] (466 bytes)
+[Invasion Hack] by [aemkei] (466 bytes)
 
 ---
 
