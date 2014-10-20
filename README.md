@@ -12,10 +12,10 @@ Coding great stuff with as few and tiny code as possible!
   - [RGB2HEX] Convert RGB to HEX (< 140 bytes)
 
 [code golf]:http://en.wikipedia.org/wiki/Code_golf
-[Invas!on]:https://rawgit.com/misantronic/min/master/invasion/invasion.html
+[Invas!on]:http://rawgit.com/misantronic/min/master/invasion/invasion.html
 [Invasion Hack]:http://jsbin.com/spaceinvader
-[@aemkei]:https://twitter.com/aemkei
-[HyperHydration]:https://rawgit.com/misantronic/min/master/hyperhydration/hyperhydration.html
-[Random Range]:https://github.com/misantronic/min/tree/master/random_range
-[RGB2HEX]:https://github.com/misantronic/min/tree/master/random_range
-[Tron]:https://rawgit.com/misantronic/min/master/tron/tron.html
+[@aemkei]:http://twitter.com/aemkei
+[HyperHydration]:http://rawgit.com/misantronic/min/master/hyperhydration/hyperhydration.html
+[Random Range]:http://github.com/misantronic/min/tree/master/random_range
+[RGB2HEX]:http://github.com/misantronic/min/tree/master/random_range
+[Tron]:http://rawgit.com/misantronic/min/master/tron/tron.html
