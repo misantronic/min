@@ -1,6 +1,6 @@
 a=A=0;
 with(c.getContext("2d")){
-	onkeyup=function(e){
+	onkeyup=(e)=>{
 		(k=e.which)==39?d=2:k==37?d=4:k==38?d=1:k==40?d=3:k==87?D=1:k==68?D=2:k==83?D=3:k==65?D=4:k==32&X&(S())
 	};
 
@@ -22,12 +22,12 @@ with(c.getContext("2d")){
 	// c: color
 	// b: start index (for gradient)
 	z=(f,g,F,c,b)=>{
-		t=function(o){
+		t=(o)=>{
 			return o.x==(T=this).x&o.y==T.y
 		};
 
 		h={x:f[l=f.length-1].x,y:f[l].y};
-		//FFX34: h=Object.assign({},f[f.length-1]);
+		//Available in FFX 34: h=Object.assign({},f[f.length-1]);
 
 		beginPath();
 		L=lineWidth=10;
