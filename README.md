@@ -25,8 +25,8 @@ collect underwater-bubbles to stay alive. Oxygen is runnin' low! (816 bytes)
 
 ###**[Script Loader]**
 dynamically load scripts (131 bytes)
-<pre><code>function l(a,c,f){with(document)for(;(f=createElement('script')).s
-rc=a.shift();head.appendChild(f))f.onload=function(){c&&c(this)}}</code></pre>
+<pre><code>function l(a,c,f){with(document)for(;(f=createElement('script')).
+src=a.shift();head.appendChild(f))f.onload=function(){c&&c(this)}}</code></pre>
 
 ---
 
