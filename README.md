@@ -5,7 +5,7 @@ Playground for my **[code golf]** projects.<br>
 Coding great stuff with as few and tiny code as possible!
 
 ###**[Invas!on]**
-invaders from outer spacing coming to kill your mom! (<512 bytes)
+invaders from outer space coming to kill your mom! (501 bytes)
 <pre><code>p=389;$=l=m=t=0;c=" _ ";onkeydown=function(e){(k=e.which)==39?p++:k==37?
 p--:!l&amp;(l=p)};setInterval('_="&lt;pre&gt;";l&amp;(l-=20)&lt;0&amp;&amp;(l=0);m=
 (m+=20)&gt;p?b[+new Date%6]:m;for(i=0;i&lt;400;i++){if(i%20==0)_+="\n";if(~b[n="ind
@@ -33,7 +33,7 @@ genta");_[$](.3,"#AFD2E6");_[$](.6,"#FF1493");_[$](!b,B);for(i=f.push({x:h.x,y:h
 ---
 
 ###**[HyperHydration]**
-collect underwater-bubbles to stay alive. Oxygen is runnin' low! (~800 bytes)
+collect underwater-bubbles to stay alive. Oxygen is runnin' low! (816 bytes)
 <pre><code>(function(_,o,n,T,S,a,q,x,k,p,b,e,w){for(i=0,P=r();i&lt;24;i++){while(~w[_](P)||P==q||!P)P=r();
 w[i]=P}function r(){return~~(Math.random()*(e+1))}function d(){s='&lt;pre style=border:solid;wi
 dth:350px&gt;';q&lt;0&amp;&amp;(q=e);p&lt;0&amp;&amp;(p=e);p&gt;e&amp;&amp;(p=e-b);for(i=0;i&lt
