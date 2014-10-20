@@ -7,8 +7,8 @@
 <body>
 	<script src="loader.min.js"></script>
 	<script>
-		l(['http://code.jquery.com/jquery-1.11.1.min.js', 'http://raw.githubusercontent.com/misantronic/min/master/scriptLoader/loader.js'], function() {
-			alert("all scripts are loaded\ncheck <HEAD>!");
+		l(['http://code.jquery.com/jquery-1.11.1.min.js', 'http://raw.githubusercontent.com/misantronic/min/master/scriptLoader/loader.js'], function(element) {
+			console.log("scripts loaded", element.src);
 		})
 	</script>
 </body>
