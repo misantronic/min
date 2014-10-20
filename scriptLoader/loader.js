@@ -1,6 +1,7 @@
 function l(
 	a,	// array containg url to scripts
-	c	// optional callback
+	c,	// optional callback
+	f	// placeholder for file
 	){
 	with(document)											// set document context
 		for(												// parse through array
