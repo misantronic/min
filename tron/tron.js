@@ -22,7 +22,7 @@ with(c.getContext("2d"))
 	// F: enemy wall
 	// c: color
 	// b: start index (for gradient)
-	z=function(f,g,F,c,b){
+	z=function(f,g,F,B,b){
 		t=function(o){
 			return o.x==(T=this).x&o.y==T.y
 		};
@@ -42,7 +42,7 @@ with(c.getContext("2d"))
 		_[$](b,"magenta");
 		_[$](.3,"#AFD2E6");
 		_[$](.6,"#FF1493");
-		_[$](!b,c);
+		_[$](!b,B);
 
 		for(i=f.push({x:h.x,y:h.y})-1;i--;){
 			lineTo(f[i].x,f[i].y)
