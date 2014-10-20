@@ -26,8 +26,8 @@ with(c.getContext("2d")){
 			return o.x==(T=this).x&o.y==T.y
 		};
 
-		l=f.length-1;
-		h={x:f[l].x,y:f[l].y};
+		h={x:f[l=f.length-1].x,y:f[l].y};
+		//FFX34: h=Object.assign({},f[f.length-1]);
 
 		beginPath();
 		L=lineWidth=10;
