@@ -4,7 +4,8 @@ min
 Playground for my **[code golf]** projects.<br>
 Coding great stuff with as few and tiny code as possible!
 
-**[Invas!on]** invaders from outer spacing coming to kill your mom! (<512 bytes)
+###**[Invas!on]**
+invaders from outer spacing coming to kill your mom! (<512 bytes)
 <pre><code>p=389;$=l=m=t=0;c=" _ ";onkeydown=function(e){(k=e.which)==39?p++:k==37?
 p--:!l&amp;(l=p)};setInterval('_="&lt;pre&gt;";l&amp;(l-=20)&lt;0&amp;&amp;(l=0);m=
 (m+=20)&gt;p?b[+new Date%6]:m;for(i=0;i&lt;400;i++){if(i%20==0)_+="\n";if(~b[n="ind
@@ -16,7 +17,8 @@ erHTML=_+="\nP "+$;t+=o;for(i in b)b[i]+=t%5e3==0?20:t%2e3==0?1:t%1e3==0&amp;&am
 
 ***
 
-**[Tron]** destroy your friends! competitive 1on1 tron clone. (773 bytes)
+###**[Tron]**
+destroy your friends! competitive 1on1 tron clone. (773 bytes)
 <pre><code>a=A=0;with(c.getContext("2d"))onkeyup=function(e){d=(k=e.which)==39?2:k==
 37?4:k==38?1:k==40?3:d;D=k==87?1:k==68?2:k==83?3:k==65?4:D;k==32&amp;&amp;X&amp;S()}
 ,S=function(){X=0;w=[{x:795,y:400}];d=1;W=[{x:5,y:0}];D=3;v=setInterval('c.width=c.w
@@ -30,23 +32,27 @@ genta");_[$](.3,"#AFD2E6");_[$](.6,"#FF1493");_[$](!b,B);for(i=f.push({x:h.x,y:h
 
 ***
 
-**[HyperHydration]** collect underwater-bubbles to stay alive. Oxygen is runnin' low! (~800 bytes)
+###**[HyperHydration]**
+collect underwater-bubbles to stay alive. Oxygen is runnin' low! (~800 bytes)
 <pre><code>(function(_,o,n,T,S,a,q,x,k,p,b,e,w){for(i=0,P=r();i<24;i++){while(~w[_](P)||P==q||!P)P=r();w[i]=P}function r(){return~~(Math.random()*(e+1))}function d(){s='&lt;pre style=border:solid;width:350px&gt;';q<0&&(q=e);p<0&&(p=e);p>e&&(p=e-b);for(i=0;i<e;i++){if(i^0&&i%b==0)s+="\n";R=0;for(y in w)if(w[y]==i)s+="~|~",R++;s+=i==p?" > ":q==i?' o ':!R?' ':''}document.body.innerHTML=s+"\n P: "+x+"\t\t\t\tO2: "+~~((1-a/T)*100)+"%"}onkeyup=function(e){h=e.which;g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;if(!~w[_](g))p=g;if(q==g)x+=5,a-=S,m(),n(k),k=o(function(){m();d()},3e3);d()};function m(){q=w[0];while(~w[_](q))q=r();d()}o(function(){a+=S;if(a>=T)n(k),onkeyup=0,a=T,d(); else {for(i in w)w[i]=w[i]-1<0?e:w[i]-1,w[i]==q&&(q--),w[i]==p&&(p--);d();}},S)})("indexOf",setInterval,clearInterval,6e4,600,0,5,0,0,0,15,255,[])</code></pre>
 
 ***
 
-**[scriptLoader]** dynamically load scripts (131 bytes)
+###**[Script Loader]**
+dynamically load scripts (131 bytes)
 <pre><code>function l(a,c,f){with(document)for(;(f=createElement('script'))
 .src=a.shift();head.appendChild(f))f.onload=function(){c&&c(this)}}</code></pre>
 
 ***
 
-**[Random Range]** generate a random integer from min to max (50 bytes)
+###**[Random Range]**
+generate a random integer from min to max (50 bytes)
 <pre>function r(m,M){return~~(Math.random()*(M-m+1))+m}</pre>
 
 ***
 
-**[RGB2HEX]** Convert RGB to HEX (140 bytes)
+###**[RGB2HEX]**
+convert rgb to hex (140 bytes)
 <pre><code>function h(n){m=Math;s="";b="0123456789ABCDEF";
 d="charAt";for(i in n)c=m.max(0,m.min(n[i],255)
 ),s+=b[d]((c-c%16)/16)+b[d](c%16);return s}</code></pre>
@@ -59,4 +65,4 @@ d="charAt";for(i in n)c=m.max(0,m.min(n[i],255)
 [Random Range]:http://github.com/misantronic/min/tree/master/random_range
 [RGB2HEX]:http://github.com/misantronic/min/tree/master/random_range
 [Tron]:http://rawgit.com/misantronic/min/master/tron/tron.html
-[scriptLoader]:http://github.com/misantronic/min/tree/master/scriptLoader
+[Script Loader]:http://github.com/misantronic/min/tree/master/scriptLoader
