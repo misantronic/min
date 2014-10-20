@@ -5,11 +5,26 @@ Playground for my **[code golf]** projects.<br>
 Coding great stuff with as few and tiny code as possible!
 
 **[Invas!on]** invaders from outer spacing coming to kill your mom! (<512 bytes)
-<pre><code>p=389;$=l=m=t=0;c=" _ ";onkeydown=function(e){(k=e.which)==39?p++:k==37?p--:!l&(l=p)};setInterval('_="&lt;pre&gt;";l&(l-=20)<0&&(l=0);m=(m+=20)>p?b[+new Date%6]:m;for(i=0;i<400;i++){if(i%20==0)_+="\\n";if(~b[n="indexOf"](l))b.splice(b[n](l),1),$+=5,l=0;if(~b[n](p)||p==m)p=n,b=[],c="xxx";_+=i==p?"oIo":~b[n](i)?".#.":i==m&&m?" * ":i==l&&l?" | ":c}document.body.innerHTML=_+="\\nP "+$;t+=o;for(i in b)b[i]+=t%5e3==0?20:t%2e3==0?1:t%1e3==0&&-1',o=50);for(b=[],j=2;j<136;j+=j==14||j==94?29:j==55?27:2)b.push(j)</code></pre>
+<pre><code>p=389;$=l=m=t=0;c=" _ ";onkeydown=function(e){(k=e.which)==39?p++:k==37?
+p--:!l&amp;(l=p)};setInterval('_="&lt;pre&gt;";l&amp;(l-=20)&lt;0&amp;&amp;(l=0);m=
+(m+=20)&gt;p?b[+new Date%6]:m;for(i=0;i&lt;400;i++){if(i%20==0)_+="\n";if(~b[n="ind
+exOf"](l))b.splice(b[n](l),1),$+=5,l=0;if(~b[n](p)||p==m)p=n,b=[],c="xxx";_+=i==p?"
+oIo":~b[n](i)?".#.":i==m&amp;&amp;m?" * ":i==l&amp;&amp;l?" | ":c}document.body.inn
+erHTML=_+="\nP "+$;t+=o;for(i in b)b[i]+=t%5e3==0?20:t%2e3==0?1:t%1e3==0&amp;&amp;-
+1',o=50);for(b=[],j=2;j&lt;136;j+=j==14||j==94?29:j==55?27:2)b.push(j)</code></pre>
 [Invasion Hack] by [@aemkei] (466 bytes)
 
 **[Tron]** destroy your friends! competitive 1on1 tron clone. (773 bytes)
-<pre><code>a=A=0;with(c.getContext("2d"))onkeyup=function(e){d=(k=e.which)==39?2:k==37?4:k==38?1:k==40?3:d;D=k==87?1:k==68?2:k==83?3:k==65?4:D;k==32&&X&S()},S=function(){X=0;w=[{x:795,y:400}];d=1;W=[{x:5,y:0}];D=3;v=setInterval('c.width=c.width;p1[H="innerHTML"]=(A+=z(w,d,W,"blue",0));p2[H]=(a+=z(W,D,w,"red",1));if(X)clearInterval(v)',60)},S(),z=function(f,g,F,B,b){t=function(o){return o.x==(T=this).x&o.y==T.y};h={x:f[l=f[m="length"]-1].x,y:f[l].y};beginPath();L=lineWidth=10;h.x+=g==2?L:g==4&&-L;h.y+=g==3?L:g==1&&-L;if(F[I="filter"](t,h)[m]||f[I](t,h)[m])return X=1;strokeStyle=_=createLinearGradient(0,0,800,0);for($ in _);_[$](b,"magenta");_[$](.3,"#AFD2E6");_[$](.6,"#FF1493");_[$](!b,B);for(i=f.push({x:h.x,y:h.y})-1;i--;){lineTo(f[i].x,f[i].y)}stroke();return 0}</code></pre>
+<pre><code>a=A=0;with(c.getContext("2d"))onkeyup=function(e){d=(k=e.which)==39?2:k==
+37?4:k==38?1:k==40?3:d;D=k==87?1:k==68?2:k==83?3:k==65?4:D;k==32&amp;&amp;X&amp;S()}
+,S=function(){X=0;w=[{x:795,y:400}];d=1;W=[{x:5,y:0}];D=3;v=setInterval('c.width=c.w
+idth;p1[H="innerHTML"]=(A+=z(w,d,W,"blue",0));p2[H]=(a+=z(W,D,w,"red",1));if(X)clear
+Interval(v)',60)},S(),z=function(f,g,F,B,b){t=function(o){return o.x==(T=this).x&amp
+;o.y==T.y};h={x:f[l=f[m="length"]-1].x,y:f[l].y};beginPath();L=lineWidth=10;h.x+=g==
+2?L:g==4&amp;&amp;-L;h.y+=g==3?L:g==1&amp;&amp;-L;if(F[I="filter"](t,h)[m]||f[I](t,h
+)[m])return X=1;strokeStyle=_=createLinearGradient(0,0,800,0);for($ in _);_[$](b,"ma
+genta");_[$](.3,"#AFD2E6");_[$](.6,"#FF1493");_[$](!b,B);for(i=f.push({x:h.x,y:h.y})
+-1;i--;){lineTo(f[i].x,f[i].y)}stroke();return 0}</code></pre>
 
 **[HyperHydration]** collect underwater-bubbles to stay alive. Oxygen is runnin' low! (~800 bytes)
 <pre><code>(function(_,o,n,T,S,a,q,x,k,p,b,e,w){for(i=0,P=r();i<24;i++){while(~w[_](P)||P==q||!P)P=r();w[i]=P}function r(){return~~(Math.random()*(e+1))}function d(){s='&lt;pre style=border:solid;width:350px&gt;';q<0&&(q=e);p<0&&(p=e);p>e&&(p=e-b);for(i=0;i<e;i++){if(i^0&&i%b==0)s+="\n";R=0;for(y in w)if(w[y]==i)s+="~|~",R++;s+=i==p?" > ":q==i?' o ':!R?' ':''}document.body.innerHTML=s+"\n P: "+x+"\t\t\t\tO2: "+~~((1-a/T)*100)+"%"}onkeyup=function(e){h=e.which;g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;if(!~w[_](g))p=g;if(q==g)x+=5,a-=S,m(),n(k),k=o(function(){m();d()},3e3);d()};function m(){q=w[0];while(~w[_](q))q=r();d()}o(function(){a+=S;if(a>=T)n(k),onkeyup=0,a=T,d(); else {for(i in w)w[i]=w[i]-1<0?e:w[i]-1,w[i]==q&&(q--),w[i]==p&&(p--);d();}},S)})("indexOf",setInterval,clearInterval,6e4,600,0,5,0,0,0,15,255,[])</code></pre>
