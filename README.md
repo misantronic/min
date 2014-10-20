@@ -10,7 +10,7 @@ Coding great stuff with as few and tiny code as possible!
   - [HyperHydration] collect underwater-bubbles to stay alive. Oxygen is runnin' low! (~800 bytes)
   - [scriptLoader] dynamically load scripts (140 bytes)
   - [Random Range] generate a random integer from min to max (50 bytes)
-  - [RGB2HEX] Convert RGB to HEX (< 140 bytes)
+  - [RGB2HEX] Convert RGB to HEX (140 bytes)
 
 [code golf]:http://en.wikipedia.org/wiki/Code_golf
 [Invas!on]:http://rawgit.com/misantronic/min/master/invasion/invasion.html
