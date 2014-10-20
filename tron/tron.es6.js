@@ -40,7 +40,8 @@ with(c.getContext("2d")){
 		if(F[I="find"](t,h)||f[I](t,h))return X=1;
 
 		strokeStyle=_=createLinearGradient(0,0,800,0);
-		_[$="addColorStop"](b,"magenta");
+		for($ in _);// get addColorStop from gradient object
+		_[$](b,"magenta");
 		_[$](.3,"#AFD2E6");
 		_[$](.6,"#FF1493");
 		_[$](!b,c);
