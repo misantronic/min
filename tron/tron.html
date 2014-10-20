@@ -53,16 +53,17 @@
 			Player 2: Use W A S D<br>
 			Press SPACE to restart
 		</p>
-		<p>
-			<pre><code>a=A=0;with(c.getContext("2d"))onkeyup=function(e){d=(k=e.which)==39?2:k==37?4:k==38?1:k==40?3:d;D=k==87?
-1:k==68?2:k==83?3:k==65?4:D;k==32&&X&S()},S=function(){X=0;w=[{x:795,y:400}];d=1;W=[{x:5,y:0}];D=3;v=set
-Interval('c.width=c.width;p1[H="innerHTML"]=(A+=z(w,d,W,"blue",0));p2[H]=(a+=z(W,D,w,"red",1));if(X)clea
-rInterval(v)',60)},S(),z=function(f,g,F,B,b){t=function(o){return o.x==(T=this).x&o.y==T.y};h={x:f[l=f[m
-="length"]-1].x,y:f[l].y};beginPath();L=lineWidth=10;h.x+=g==2?L:g==4&&-L;h.y+=g==3?L:g==1&&-L;if(F[I="f
-ilter"](t,h)[m]||f[I](t,h)[m])return X=1;strokeStyle=_=createLinearGradient(0,0,800,0);for($ in _);_[$](
-b,"magenta");_[$](.3,"#AFD2E6");_[$](.6,"#FF1493");_[$](!b,B);for(i=f.push({x:h.x,y:h.y})-1;i--;){lineTo
-(f[i].x,f[i].y)}stroke();return 0}</code></pre>
-		</p>
+
+			<pre><code>p=389;$=l=m=t=0;c=&quot; _ &quot;;onkeydown=function(e){(k=e.which)==39?p++:k==37
+?p--:!l&amp;(l=p)};setInterval('_=&quot;&lt;pre&gt;&quot;;l&amp;(l-=20)&lt;0&amp;
+&amp;(l=0);m=(m+=20)&gt;p?b[+new Date%6]:m;for(i=0;i&lt;400;i++){if(i%20==0)_+=
+&quot;\\n&quot;;if(~b[n=&quot;indexOf&quot;](l))b.splice(b[n](l),1),$+=5,l=0;if
+(~b[n](p)||p==m)p=n,b=[],c=&quot;xxx&quot;;_+=i==p?&quot;oIo&quot;:~b[n](i)?&quot;
+.#.&quot;:i==m&amp;&amp;m?&quot; * &quot;:i==l&amp;&amp;l?&quot; | &quot;:c}document
+.body.innerHTML=_+=&quot;\\nP &quot;+$;t+=o;for(i in b)b[i]+=t%5e3==0?20:t%2e3==0?1:
+t%1e3==0&amp;&amp;-1',o=50);for(b=[],j=2;j&lt;136;j+=j==14||j==94?29:j==55?27:2)
+b.push(j)</code></pre>
+
 		<script src="tron.min.js"></script>
 	</div>
 </body>
