@@ -34,16 +34,17 @@ genta");_[$](.3,"#AFD2E6");_[$](.6,"#FF1493");_[$](!b,B);for(i=f.push({x:h.x,y:h
 
 ###**[HyperHydration]**
 collect underwater-bubbles to stay alive. Oxygen is runnin' low! (816 bytes)
-<pre><code>(function(_,o,n,T,S,a,q,x,k,p,b,e,w){for(i=0,P=r();i&lt;24;i++){while(~w[_](P)||P==q||!P)P=r();
-w[i]=P}function r(){return~~(Math.random()*(e+1))}function d(){s='&lt;pre style=border:solid;wi
-dth:350px&gt;';q&lt;0&amp;&amp;(q=e);p&lt;0&amp;&amp;(p=e);p&gt;e&amp;&amp;(p=e-b);for(i=0;i&lt
-;e;i++){if(i^0&amp;&amp;i%b==0)s+="   ";R=0;for(y in w)if(w[y]==i)s+="~|~",R++;s+=i==p?" &gt; "
-:q==i?' o ':!R?'   ':''}document.body.innerHTML=s+" P: "+x+"				    O2: "+~~((1-a/T)
-*100)+"%"}onkeyup=function(e){h=e.which;g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;if(!~w[_](g)
-)p=g;if(q==g)x+=5,a-=S,m(),n(k),k=o(function(){m();d()},3e3);d()};function m(){q=w[0];while(~w[_
-](q))q=r();d()}o(function(){a+=S;if(a&gt;=T)n(k),onkeyup=0,a=T,d(); else {for(i in w)w[i]=w[i]-1
-&lt;0?e:w[i]-1,w[i]==q&amp;&amp;(q--),w[i]==p&amp;&amp;(p--);d();}},S)})("indexOf",setInterval,c
-learInterval,6e4,600,0,5,0,0,0,15,255,[])</code></pre>
+<pre><code>(function(_,o,n,T,S,a,q,x,k,p,b,e,w){for(i=0,P=r();i&lt;24;i++){while(~w[_]
+(P)||P==q||!P)P=r();w[i]=P}function r(){return~~(Math.random()*(e+1))}function d(){s='
+&lt;pre style=border:solid;width:350px&gt;';q&lt;0&amp;&amp;(q=e);p&lt;0&amp;&amp;(p=e
+);p&gt;e&amp;&amp;(p=e-b);for(i=0;i&lt;e;i++){if(i^0&amp;&amp;i%b==0)s+="   ";R=0;for(
+y in w)if(w[y]==i)s+="~|~",R++;s+=i==p?" &gt; ":q==i?' o ':!R?'   ':''}document.body.i
+nnerHTML=s+" P: "+x+"				    O2: "+~~((1-a/T)*100)+"%"}onkeyup=function(e){
+h=e.which;g=h==39?p+1:h==37?p-1:h==40?p+b:h==38?p-b:0;if(!~w[_](g))p=g;if(q==g)x+=5,a-
+=S,m(),n(k),k=o(function(){m();d()},3e3);d()};function m(){q=w[0];while(~w[_](q))q=r()
+;d()}o(function(){a+=S;if(a&gt;=T)n(k),onkeyup=0,a=T,d(); else {for(i in w)w[i]=w[i]-1
+&lt;0?e:w[i]-1,w[i]==q&amp;&amp;(q--),w[i]==p&amp;&amp;(p--);d();}},S)})("indexOf",set
+Interval,clearInterval,6e4,600,0,5,0,0,0,15,255,[])</code></pre>
 
 ---
 
