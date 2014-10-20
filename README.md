@@ -14,7 +14,10 @@ invaders from outer space coming to kill your mom! (501 bytes)
 ###**[Tron]**
 destroy your friends! competitive 1on1 tron clone. (773 bytes)
 <pre><code>a=A=0;with(c.getContext(&quot;2d&quot;))onkeyup=function(e){d=(k=e.which)==39?2:k==37?4:k==38?1:k==40?3:d;D=k==87?1:k==68?2:k==83?3:k==65?4:D;k==32&amp;&amp;X&amp;S()},S=function(){X=0;w=[{x:795,y:400}];d=1;W=[{x:5,y:0}];D=3;v=setInterval('c.width=c.width;p1[H=&quot;innerHTML&quot;]=(A+=z(w,d,W,&quot;blue&quot;,0));p2[H]=(a+=z(W,D,w,&quot;red&quot;,1));if(X)clearInterval(v)',60)},S(),z=function(f,g,F,B,b){t=function(o){return o.x==(T=this).x&amp;o.y==T.y};h={x:f[l=f[m=&quot;length&quot;]-1].x,y:f[l].y};beginPath();L=lineWidth=10;h.x+=g==2?L:g==4&amp;&amp;-L;h.y+=g==3?L:g==1&amp;&amp;-L;if(F[I=&quot;filter&quot;](t,h)[m]||f[I](t,h)[m])return X=1;strokeStyle=_=createLinearGradient(0,0,800,0);for($ in _);_[$](b,&quot;magenta&quot;);_[$](.3,&quot;#AFD2E6&quot;);_[$](.6,&quot;#FF1493&quot;);_[$](!b,B);for(i=f.push({x:h.x,y:h.y})-1;i--;){lineTo(f[i].x,f[i].y)}stroke();return 0}</code></pre>
-
+(Note: If you want to use this, be sure to have a HTML-construct like:
+<code>&lt;b id=&quot;p1&quot;&gt;0&lt;/b&gt;
+&lt;b id=&quot;p2&quot;&gt;0&lt;/b&gt;
+&lt;canvas id=&quot;c&quot; width=&quot;800&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;</code>)
 ---
 
 ###**[HyperHydration]**
