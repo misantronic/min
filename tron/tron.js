@@ -1,11 +1,10 @@
 a=A=0;
-with(c.getContext("2d")){
+with(c.getContext("2d"))
 	onkeyup=function(e){
 		d=(k=e.which)==39?2:k==37?4:k==38?1:k==40?3:d;
 		D=k==87?1:k==68?2:k==83?3:k==65?4:D;
 		k==32&&X&S()
-	};
-
+	},
 	S=function(){
 		X=0;
 		w=[{x:795,y:400}];d=1;// player 1
@@ -16,7 +15,7 @@ with(c.getContext("2d")){
 			p2[H]=(a+=z(W,D,w,"red",1));\
 			if(X)clearInterval(v)\
 		',60)
-	};S();
+	},S(),
 
 	// f: walls
 	// g: direction
@@ -51,4 +50,3 @@ with(c.getContext("2d")){
 		stroke();
 		return 0
 	}
-}
