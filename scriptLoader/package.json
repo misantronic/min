@@ -1,9 +1,0 @@
-{
-	"name": "scriptLoader",
-	"description": "dynamically load scripts",
-	"keywords": [
-		"javascript",
-		"scripts",
-		"ajax"
-	]
-}
