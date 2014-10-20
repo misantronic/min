@@ -38,7 +38,8 @@ with(c.getContext("2d")){
 		if(F[I="filter"](t,h).length||f[I](t,h).length)return X=1;
 
 		strokeStyle=_=createLinearGradient(0,0,800,0);
-		_[$="addColorStop"](b,"magenta");
+		for($ in _);
+		_[$](b,"magenta");
 		_[$](.3,"#AFD2E6");
 		_[$](.6,"#FF1493");
 		_[$](!b,c);
