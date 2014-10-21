@@ -24,7 +24,7 @@ F('#id .class').find('a:first-of-type');
 F('#id .class').find('a:last-of-type');
 ```
 
-### DOM Manipulation
+### DOM Manipulation/Traversing
 ```javascript
 // Output HTML of a selector
 var html = F('#id').find('.class').html();
@@ -71,6 +71,17 @@ F('#id')
 	.trigger('event', { name: '@misantronic' } )
 	.off('event', eventHandler);
 ```
+
+---
+
+#### Tasks
+- [x] CSS Selectors
+- [x] DOM Manipulation
+- [x] Traversing
+- [x] Events
+- [x] AJAX
+- [ ] Data-Binding
+- [ ] Other great stuff
 
 ---
 
