@@ -5,7 +5,7 @@ A lightweight JavaScript library (< 1kb) featuring CSS Selectors, DOM Manipulati
 
 ### Usage:
 ```javascript
-<pre><code><script src="https://raw.githubusercontent.com/misantronic/min/master/framewreck/fw.min.js"></script>
+<script src="https://raw.githubusercontent.com/misantronic/min/master/framewreck/fw.min.js"></script>
 ```
 
 ### CSS Selectors
