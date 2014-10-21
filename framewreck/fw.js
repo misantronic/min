@@ -76,13 +76,14 @@ F=function(c){
 	 * to the first element in context
 	 * @param {String} s selector or HTML/Text
 	 */
-	_.insert=function(s){
+	_.append=function(s){
 		g=s.match(/^</)?0:d[q](s)[0];
 		for(i=l;i--;)
 			g?g.appendChild(x[i]):x[i].innerHTML+=s;
 
 		return this
 	};
+	_.appendTo=_.append;
 
 	/**
 	 * Get direct children of the context
