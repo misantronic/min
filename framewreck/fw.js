@@ -76,7 +76,7 @@ F=function(c){
 	 * to the first element in context
 	 * @param {String} s selector or HTML/Text
 	 */
-	_.append=function(s){
+	_.insert=function(s){
 		g=s.match(/^</)?0:d[q](s)[0];
 		for(i=l;i--;)
 			g?g.appendChild(x[i]):x[i].innerHTML+=s;
