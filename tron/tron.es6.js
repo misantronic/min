@@ -1,9 +1,7 @@
 a=A=0;
 with(c.getContext("2d")){
-	onkeyup=(e)=>{
-		d=(k=e.which)==39?2:k==37?4:k==38?1:k==40?3:d;
-		D=k==87?1:k==68?2:k==83?3:k==65?4:D;
-		k==32&&X&S()
+	onkeyup=function(e){
+		(k=e.which)==39?d=2:k==37?d=4:k==38?d=1:k==40?d=3:k==87?D=1:k==68?D=2:k==83?D=3:k==65?D=4:k==32&X&(S())
 	};
 
 	S=()=>{
@@ -24,12 +22,12 @@ with(c.getContext("2d")){
 	// c: color
 	// b: start index (for gradient)
 	z=(f,g,F,c,b)=>{
-		t=(o)=>{
+		t=function(o){
 			return o.x==(T=this).x&o.y==T.y
 		};
 
-		h={x:f[l=f.length-1].x,y:f[l].y};
-		//Available in FFX 34: h=Object.assign({},f[f.length-1]);
+		l=f.length-1;
+		h={x:f[l].x,y:f[l].y};
 
 		beginPath();
 		L=lineWidth=10;
@@ -37,10 +35,10 @@ with(c.getContext("2d")){
 		h.x+=g==2?L:g==4&&-L;
 		h.y+=g==3?L:g==1&&-L;
 
-		if(F[I="find"](t,h)||f[I](t,h))return X=1;
+		if(F[I="filter"](t,h).length||f[I](t,h).length)return X=1;
 
 		strokeStyle=_=createLinearGradient(0,0,800,0);
-		for($ in _);// get addColorStop from gradient object
+		for($ in _);
 		_[$](b,"magenta");
 		_[$](.3,"#AFD2E6");
 		_[$](.6,"#FF1493");
