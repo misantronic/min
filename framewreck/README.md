@@ -23,8 +23,21 @@ F('#id').find('.class').html('<a href="#">Link</a>');
 
 ### Event-System
 ```javascript
-F('#id').on('event', function(e) {
+var eventHandler = function(e) {
 	console.log(e, e.detail); // output event and given parameter object
-});
+};
+
+F('#id').on('event', eventHandler);
 F('#id').trigger('event', { name: '@misantronic' } );
+F('#id').off('event', eventHandler);
+```
+
+### Chaining
+```javascript
+F('#id')
+	.find('.class')
+	.html('test')
+	.on('event', eventHandler)
+	.trigger('event', { name: '@misantronic' } )
+	.off('event', eventHandler);
 ```
