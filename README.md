@@ -4,6 +4,9 @@ min
 Playground for my **[code golf]** projects.<br>
 Coding great stuff with as few and tiny code as possible!
 
+###**[FrameWreck]**
+A lightweight jQuery-like JavaScript library featuring CSS Selectors, DOM Manipulation/Traversing, AJAX and a native Event-System. (~ 800 bytes)
+
 ###**[Invasion]**
 a space invader clone. invaders from outer space coming to kill your mom! (501 bytes)
 ```javascript
@@ -60,6 +63,7 @@ d="charAt";for(i in n)c=m.max(0,m.min(n[i],255)
 ```
 
 [code golf]:http://en.wikipedia.org/wiki/Code_golf
+[FrameWreck]:https://github.com/misantronic/FrameWreck
 [Invasion]:http://rawgit.com/misantronic/min/master/invasion/invasion.html
 [Invasion Hack]:http://jsbin.com/spaceinvader
 [@aemkei]:http://twitter.com/aemkei
