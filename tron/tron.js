@@ -11,8 +11,8 @@ with(c.getContext("2d"))
 		W=[{x:5,y:0}];D=3;// player 2
 		v=setInterval('\
 			c.width=c.width;\
-			p1[H="innerHTML"]=(A+=z(w,d,W,"blue",0));\
-			p2[H]=(a+=z(W,D,w,"red",1));\
+			p1[H="innerHTML"]=A+=z(w,d,W,"blue",0);\
+			p2[H]=a+=z(W,D,w,"red",1);\
 			if(X)clearInterval(v)\
 		',60)
 	},S(),
@@ -46,7 +46,7 @@ with(c.getContext("2d"))
 
 		for(i=f.push({x:h.x,y:h.y})-1;i--;){
 			lineTo(f[i].x,f[i].y)
-		}
+		};
 		stroke();
 		return 0
 	}
