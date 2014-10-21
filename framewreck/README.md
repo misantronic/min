@@ -13,7 +13,7 @@ F('#id .class').find('a');</code></pre>
 
 ### DOM Manipulation
 <pre><code>var html = F('#id').find('.class').html();
-F('#id').find('.class').html('<a href="#">Link</a>');</code></pre>
+F('#id').find('.class').html('&lt;a href="#"&gt;Link&lt;/a&gt;');</code></pre>
 
 ### Event-System
 <pre><code>F('#id').on('event', function(e) {
