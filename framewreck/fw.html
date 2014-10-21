@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>FrameWreck</title>
+	<style>
+		body {
+			font-family: "Courier New", sans-serif;
+			font-size: 12px;
+		}
+		#wrapper {
+			width: 980px;
+			margin: 0 auto;
+		}
+
+		#wrapper .box {
+			float: left;
+			margin: 0 20px;
+			border: 1px solid #111;
+			background: #ddd;
+		}
+
+		.box {
+			background: red;
+			padding: 5px;
+		}
+
+		.clear { clear: both; }
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>Headline</h1>
+		<div class="box">
+			<h2>Good box 1</h2>
+			<p>Lorem ipsum 1</p>
+			<p>Lorem ipsum 2</p>
+		</div>
+		<div class="box">
+			<h2>Good box 2</h2>
+			<p>Lorem ipsum 2</p>
+		</div>
+		<div class="box">
+			<h2>Good box 3</h2>
+			<p>Lorem ipsum 3</p>
+		</div>
+		<br class="clear"/>
+	</div>
+	<hr>
+	<div class="box">
+		Evil Box
+	</div>
+
+	<script src="fw.js"></script>
+</body>
+</html>
