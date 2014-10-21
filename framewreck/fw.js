@@ -141,6 +141,23 @@ F=function(c){
 		return this
 	};
 
+	/**
+	 * AJAX Call
+	 * @param M method - get/post
+	 * @param u url
+	 * @param [g] callback if passed -> asych call
+	 * @param [d] post_data
+	 * @param X
+	 */
+	_.ajax=function(M,u,g,d,X){
+		with(X=new XMLHttpRequest)
+			return onreadystatechange=function(){
+				readyState^4||g(this)
+			},
+			open(M,u,g),send(d),
+			X
+	};
+
 	// select context
 	_.find(c);
 

@@ -1,7 +1,7 @@
 FrameWreck
 =========
 
-A lightweight JavaScript library (< 1kb) featuring CSS Selectors, DOM Manipulation and a native Event-System.
+A lightweight JavaScript library (~ 1kb) featuring CSS Selectors, DOM Manipulation, AJAX and a native Event-System.
 
 ### Usage:
 ```html
@@ -39,6 +39,12 @@ var eventHandler = function(e) {
 F('#id').on('event', eventHandler);
 F('#id').trigger('event', { name: '@misantronic' } );
 F('#id').off('event', eventHandler);
+```
+
+### AJAX
+```javascript
+F().ajax('get', 'http://server.com/api?id=1337', function(e){ console.log(e.responseText) });
+F().ajax('post', 'http://server.com', function(e){ console.log(e.responseText) }, { name: '@misantronic' });
 ```
 
 ### Chaining
