@@ -87,18 +87,40 @@ F=function(c){
 	//	return this
 	//};
 
+	/**
+	 * Attach event listener
+	 * @param {String} v eventname
+	 * @param {Function} m callback
+	 * @returns {F}
+	 */
 	_.on=function(v,m){
-		for(i=l;i--;)x[i].addEventListener(v, m);
+		for(i=l;i--;)x[i].addEventListener(v,m);
 
-		return new Event(v)
+		return this
 	};
 
+	/**
+	 * Remove event listener
+	 * @param {String} v eventname
+	 * @param {Function} m callback
+	 * @returns {F}
+	 */
 	_.off=function(v,m){
-		for(i=l;i--;)x[i].removeEventListener(v,m)
+		for(i=l;i--;)x[i].removeEventListener(v,m);
+
+		return this
 	};
 
-	_.fire=function(v){
-		for(i=0;i<l;i++)x[i].dispatchEvent(v)
+	/**
+	 * Fire event listener
+	 * @param {String} v eventname
+	 * @param {*} [d] data
+	 * @returns {F}
+	 */
+	_.fire=function(v,d){
+		for(i=l;i--;)x[i].dispatchEvent(new CustomEvent(v,{detail: d}));
+
+		return this
 	};
 
 	// select context

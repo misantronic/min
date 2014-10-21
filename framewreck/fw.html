@@ -13,9 +13,9 @@
 			margin: 0 auto;
 		}
 
-		#wrapper .box {
+		.boxes .box {
 			float: left;
-			margin: 0 20px;
+			margin: 20px;
 			border: 1px solid #111;
 			background: #ddd;
 		}
@@ -30,27 +30,28 @@
 </head>
 <body>
 	<div id="wrapper">
-		<h1>Headline</h1>
-		<div class="box">
-			<h2>Good box 1</h2>
-			<p>Lorem ipsum 1</p>
-			<p>Lorem ipsum 2</p>
+		<div class="boxes">
+			<h1>Headline</h1>
+			<div class="box">
+				<h2>Good box 1</h2>
+				<p>Lorem ipsum 1</p>
+				<p>Lorem ipsum 2</p>
+			</div>
+			<div class="box">
+				<h2>Good box 2</h2>
+				<p>Lorem ipsum 2</p>
+			</div>
+			<div class="box">
+				<h2>Good box 3</h2>
+				<p>Lorem ipsum 3</p>
+			</div>
+			<br class="clear"/>
 		</div>
 		<div class="box">
-			<h2>Good box 2</h2>
-			<p>Lorem ipsum 2</p>
+			Evil Box
 		</div>
-		<div class="box">
-			<h2>Good box 3</h2>
-			<p>Lorem ipsum 3</p>
-		</div>
-		<br class="clear"/>
-	</div>
-	<hr>
-	<div class="box">
-		Evil Box
 	</div>
 
-	<script src="fw.js"></script>
+	<script src="fw.min.js"></script>
 </body>
 </html>
