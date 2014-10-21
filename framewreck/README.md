@@ -10,9 +10,15 @@ A lightweight JavaScript library (~ 750 b) featuring CSS Selectors, DOM Manipula
 
 ### CSS Selectors
 ```javascript
+// IDs and classes
 F('#id');
 F('#id').find('.class');
 F('#id .class').find('a');
+
+// Pseudo classes
+F('#id .class:first-child');
+F('#id .class').find('a:first-of-type');
+F('#id .class').find('a:last-of-type');
 ```
 
 ### DOM Manipulation
