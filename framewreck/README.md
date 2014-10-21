@@ -42,9 +42,15 @@ var eventHandler = function(e) {
 	console.log(e, e.detail); // output event and given parameter object
 };
 
-F('#id').on('event', eventHandler);
-F('#id').trigger('event', { name: '@misantronic' } );
-F('#id').off('event', eventHandler);
+// common events
+F('a.button').on('click', eventHandler);
+F('a.button').on('mouseover', eventHandler);
+*...*
+
+// custom events
+F('#id').on('myEvent', eventHandler);
+F('#id').trigger('myEvent', { name: '@misantronic' } );
+F('#id').off('myEvent', eventHandler);
 ```
 
 ### AJAX
