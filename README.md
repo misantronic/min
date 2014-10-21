@@ -50,7 +50,7 @@ d="charAt";for(i in n)c=m.max(0,m.min(n[i],255)
 [Invasion Hack]:http://jsbin.com/spaceinvader
 [@aemkei]:http://twitter.com/aemkei
 [Hyper Hydration]:http://rawgit.com/misantronic/min/master/hyperhydration/hyperhydration.html
-[Random Range]:http://github.com/misantronic/min/tree/master/random_range
+[Random Range]:http://github.com/misantronic/min/tree/master/randomrange
 [RGB2HEX]:http://github.com/misantronic/min/tree/master/random_range
 [Tron]:http://rawgit.com/misantronic/min/master/tron/tron.html
-[Script Loader]:http://github.com/misantronic/min/tree/master/scriptLoader
+[Script Loader]:http://github.com/misantronic/min/tree/master/scriptloader
