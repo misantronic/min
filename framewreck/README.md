@@ -15,7 +15,7 @@ F('#id');
 F('#id').find('.class');
 F('#id .class').find('a');
 
-// get .class with index 1
+// get .class at index 1
 F('#id .class').get(1);
 
 // Pseudo classes
