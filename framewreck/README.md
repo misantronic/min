@@ -18,7 +18,7 @@ F('#id .class').find('a');
 ### DOM Manipulation
 ```javascript
 var html = F('#id').find('.class').html();
-F('#id').find('.class').html('&lt;a href="#"&gt;Link&lt;/a&gt;');
+F('#id').find('.class').html('<a href="#">Link</a>');
 ```
 
 ### Event-System
