@@ -4,20 +4,27 @@ FrameWreck
 A lightweight JavaScript library (< 1kb) featuring CSS Selectors, DOM Manipulation and a native Event-System.
 
 ### Usage:
-<pre><code>&lt;script src=&quot;https://raw.githubusercontent.com/misantronic/min/master/framewreck/fw.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+```javascript
+<pre><code><script src="https://raw.githubusercontent.com/misantronic/min/master/framewreck/fw.min.js"></script>
+```
 
 ### CSS Selectors
-<pre><code>F('#id');
+```javascript
+F('#id');
 F('#id').find('.class');
-F('#id .class').find('a');</code></pre>
+F('#id .class').find('a');
+```
 
 ### DOM Manipulation
-<pre><code>var html = F('#id').find('.class').html();
-F('#id').find('.class').html('&lt;a href="#"&gt;Link&lt;/a&gt;');</code></pre>
+```javascript
+var html = F('#id').find('.class').html();
+F('#id').find('.class').html('&lt;a href="#"&gt;Link&lt;/a&gt;');
+```
 
 ### Event-System
-<pre><code>F('#id').on('event', function(e) {
+```javascript
+F('#id').on('event', function(e) {
 	console.log(e, e.detail); // output event and given parameter object
 });
 F('#id').trigger('event', { name: '@misantronic' } );
-</code></pre>
+```
