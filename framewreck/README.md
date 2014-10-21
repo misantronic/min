@@ -17,8 +17,17 @@ F('#id .class').find('a');
 
 ### DOM Manipulation
 ```javascript
+// Output HTML of a selector
 var html = F('#id').find('.class').html();
+
+// Set HTML of a selector
 F('#id').find('.class').html('<a href="#">Link</a>');
+
+// Append HTML/Text to a DOM-Element
+F('#id').append('<a href="#">Link</a>');
+
+// Move an existing DOM-Element to another
+F('#id-2').append('.class-1');
 ```
 
 ### Event-System

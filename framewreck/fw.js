@@ -1,14 +1,16 @@
 F=function(c){
-	var _=this			// placeholder for this context
-		,x				// the context selected by querySelector
-		,l				// length of x
-		,i				// placeholder for a counter
-		,j				// placeholder for a counter
-		,a				// placeholder for an array
-		,e				// placeholder for an element
-		,m				// placeholder
-		,q				// placeholder for the querySelector
-		,h="innerHTML";	// placeholder for innerHTML
+	var _=this					// this context
+		,x						// the context selected by querySelector
+		,l						// length of x
+		,i						// placeholder counter1
+		,j						// placeholder counter2
+		,a						// placeholder array
+		,e						// placeholder element
+		,m="length"				// placeholder length
+		,q="querySelectorAll"	// placeholder querySelectorAll
+		,h="innerHTML"			// placeholder innerHTML
+		,d=document				// placeholder document
+		,g;						// placeholder generic
 
 	if(_.__proto__.constructor!=F)return new F(c);
 
@@ -22,8 +24,8 @@ F=function(c){
 		for(i=0;i<l;i++)
 			e=x[i],
 			a.push(e[h]),
-			v&&(e[h] = v);
-		return v&&this||a.join("").replace(/\s/g, "")
+			v&&(e[h]=v);
+		return v&&this||a.join("").replace(/\s/g,"")
 	};
 
 	/**
@@ -40,7 +42,7 @@ F=function(c){
 	/**
 	 * Reset keys inside this object and recount length
 	 */
-	_.y=function() {
+	_.y=function(){
 		for(i in x)_[i]=x[i];
 		l=x[m]
 	};
@@ -52,17 +54,32 @@ F=function(c){
 	 */
 	_.find=function(s){
 		a=[];
-		if(!x)a=document[q="querySelectorAll"](s);
+		if(!x)a=d[q](s);
 		else for(i=l;i--;)a[i]=x[i][q](s);
 
 		x=[];
-		for(i=a[m="length"];i--;)
+		for(i=a[m];i--;)
 			if(a[i][m])
 				for(j=a[i][m];j--;)
 					x.push(a[i][j]);
 			else x.push(a[i]);
 
 		_.y();
+
+		return this
+	};
+
+	/**
+	 * Move selector around in the context
+	 * or insert HTML/Text
+	 * Note: selector s will always appended
+	 * to the first element in context
+	 * @param {String} s selector or HTML/Text
+	 */
+	_.append=function(s){
+		g=s.match(/^</)?0:d[q](s)[0];
+		for(i=l;i--;)
+			g?g.appendChild(x[i]):x[i].innerHTML+=s;
 
 		return this
 	};
@@ -114,11 +131,11 @@ F=function(c){
 	/**
 	 * Fire event listener
 	 * @param {String} v eventname
-	 * @param {*} [d] data
+	 * @param {*} [D] data
 	 * @returns {F}
 	 */
-	_.fire=function(v,d){
-		for(i=l;i--;)x[i].dispatchEvent(new CustomEvent(v,{detail: d}));
+	_.fire=function(v,D){
+		for(i=l;i--;)x[i].dispatchEvent(new CustomEvent(v,{detail:D}));
 
 		return this
 	};
