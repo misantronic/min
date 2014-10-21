@@ -1,7 +1,7 @@
 FrameWreck
 =========
 
-A lightweight JavaScript library (~ 1kb) featuring CSS Selectors, DOM Manipulation, AJAX and a native Event-System.
+A lightweight JavaScript library (< 1kb) featuring CSS Selectors, DOM Manipulation, AJAX and a native Event-System.
 
 ### Usage:
 ```html
@@ -56,3 +56,8 @@ F('#id')
 	.trigger('event', { name: '@misantronic' } )
 	.off('event', eventHandler);
 ```
+
+fw.packed.js crushed with [RegPack]
+Configuration: All checkboxes off except "Reassign variable names except: F x l i j a e m q h d g"
+
+[RegPack]:http://siorki.github.io/regPack.html
