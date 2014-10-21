@@ -4,7 +4,7 @@ FrameWreck
 A lightweight JavaScript library (< 1kb) featuring CSS Selectors, DOM Manipulation and a native Event-System.
 
 ### Usage:
-```javascript
+```html
 <script src="https://raw.githubusercontent.com/misantronic/min/master/framewreck/fw.min.js"></script>
 ```
 
