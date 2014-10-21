@@ -43,8 +43,9 @@ F=function(c){
 	 * Reset keys inside this object and recount length
 	 */
 	_.y=function(){
-		for(i in x)_[i]=x[i];
-		l=x[m]
+		for(i=99;i--;)delete _[i];	// clean up objects indicies
+		for(i in x)_[i]=x[i];		// assign new indicies
+		_[m]=l=x[m]					// set .length and internal placeholder l
 	};
 
 	/**
@@ -58,12 +59,24 @@ F=function(c){
 		else for(i=l;i--;)a[i]=x[i][q](s);
 
 		x=[];
-		for(i=a[m];i--;)
+		for(i=0;i<a[m];i++)
 			if(a[i][m])
-				for(j=a[i][m];j--;)
+				for(j=0;j<a[i][m];j++)
 					x.push(a[i][j]);
 			else x.push(a[i]);
 
+		_.y();
+
+		return this
+	};
+
+	/**
+	 * Get element at index g from context
+	 * @param {Number} g index
+	 * @returns {F}
+	 */
+	_.get=function(g){
+		x=[x[g]];
 		_.y();
 
 		return this

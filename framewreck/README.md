@@ -1,7 +1,7 @@
 FrameWreck
 =========
 
-A lightweight JavaScript library (~ 750 b) featuring CSS Selectors, DOM Manipulation, AJAX and a native Event-System.
+A lightweight JavaScript library (~ 800 b) featuring CSS Selectors, DOM Manipulation, AJAX and a native Event-System.
 
 ### Usage:
 ```html
@@ -14,6 +14,9 @@ A lightweight JavaScript library (~ 750 b) featuring CSS Selectors, DOM Manipula
 F('#id');
 F('#id').find('.class');
 F('#id .class').find('a');
+
+// get .class with index 1
+F('#id .class').get(1);
 
 // Pseudo classes
 F('#id .class:first-child');
