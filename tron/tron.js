@@ -23,10 +23,6 @@ with(c.getContext("2d"))
 	// c: color
 	// b: start index (for gradient)
 	z=function(f,g,F,B,b){
-		t=function(o){
-			return o.x==(T=this).x&o.y==T.y
-		};
-
 		h={x:f[l=f[m="length"]-1].x,y:f[l].y};
 
 		beginPath();
@@ -35,7 +31,7 @@ with(c.getContext("2d"))
 		h.x+=g==2?L:g==4&&-L;
 		h.y+=g==3?L:g==1&&-L;
 
-		if(F[I="filter"](t,h)[m]||f[I](t,h)[m])return X=1;
+		if(F[I="filter"](t=function(o){return o.x==(T=this).x&o.y==T.y},h)[m]||f[I](t,h)[m])return X=1;
 
 		strokeStyle=_=createLinearGradient(0,0,800,0);
 		for($ in _);
