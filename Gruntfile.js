@@ -11,15 +11,31 @@ module.exports = function(grunt) {
 			projects: {
 				files: {
 					'hyperhydration/hyperhydration.min.js'	: ['hyperhydration/hyperhydration.js'],
+					'templates/templates.min.js'			: ['templates/templates.js']
 				//	'invasion/invasion.min.js'				: ['invasion/invasion.js']
 				}
+			}
+		},
+
+		regpack: {
+			projects: {
+				options: {
+					globalVariables: 'tmpl',
+					separator: ''
+				},
+				files: [
+					{
+						'templates/templates.packed.js': ['templates/templates.min.js']
+					}
+				]
 			}
 		}
 	});
 
 	// load tasks
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-regpack');
 
 	// tasks
-	grunt.registerTask('default', ['uglify']);
+	grunt.registerTask('default', ['uglify', 'regpack']);
 };

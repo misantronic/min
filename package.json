@@ -4,10 +4,9 @@
   "description": "javascript code golf projects",
   "dependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-compress": "~0.12.0",
-    "grunt-contrib-uglify": "~0.6.0"
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-regpack": "~0.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
