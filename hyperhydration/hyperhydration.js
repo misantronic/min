@@ -13,7 +13,7 @@ function d(){
 		for(y in w)if(w[y]==i)s+="~|~",R++;
 		s+=i==p?" > ":q==i?' o ':!R?'   ':''
 	}
-	document.body.innerHTML=s+"\n P: "+x+"\t\t\t\t    O2: "+~~((1-a/T)*100)+"%"
+	document.body.innerHTML=s+"\n P: "+x+", O2: "+~~((1-a/T)*100)+"%"
 }
 onkeyup=function(e){
 	h=e.which;
