@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 			projects: {
 				files: {
 					'hyperhydration/hyperhydration.min.js'	: ['hyperhydration/hyperhydration.js'],
-					'invasion/invasion.min.js'				: ['invasion/invasion.js']
+				//	'invasion/invasion.min.js'				: ['invasion/invasion.js']
 				}
 			}
 		}
