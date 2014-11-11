@@ -11,6 +11,7 @@ function tmpl(s, c) {
 		i = 0, r;
 
 	// replace ifs with map numbers
+	// TODO: make IF run!
 	s = s[r = "replace"](/(?:{{#if(?: *))(.*)(?: *)}}/g, function(p, a) {
 		M[i] = a;
 		return '{##'+(i++)+'##}'
@@ -21,26 +22,26 @@ function tmpl(s, c) {
 
 	/**
 	 * Parse object
-	 * @param {Object} ctx Context object
+	 * @param {Object} c Context object
 	 * @param [s] placeholder
 	 * @param [x] placeholder
 	 * @returns {String}
 	 */
-	S.O = function(ctx, s, x) {
+	S.O = function(c, s, x) {
 		// look for each-tag
 		return this[r](x=/{{(?: *)(\w+)(?: *)}}([\s\S]*?){{\/(?: *)\1(?: *)}}/g, function(p, a, b) {
 			s = "";
-			if(ctx[a])
+			if(c[a])
 				// when each is found
-				for(i in ctx[a])
+				for(i in c[a])
 					// replace vars
-					s += b.T("ctx['"+a+"']["+i+"]", ctx),
+					s += b.T("c['"+a+"']["+i+"]", c),
 
 					// if statement
-					s = s.I("ctx."+a+"["+i+"].", ctx),
+					s = s.I("c."+a+"["+i+"].", c),
 
 						// check for another each
-					s.match(x) && (s = s.O(ctx[a][i]));
+					s.match(x) && (s = s.O(c[a][i]));
 
 			return s
 		});
@@ -49,13 +50,13 @@ function tmpl(s, c) {
 	/**
 	 * Parse {{#if}} ... {{/if}, {{##if}} ... {{//if}, etc
 	 * @param {String} V eval base
-	 * @param {Object} ctx context to look for vars in eval
+	 * @param {Object} c context to look for vars in eval
 	 * @param [m] placeholder
 	 * @param [v] placeholder
 	 * @param [e] placeholder
 	 * @returns {RegExp}
 	 */
-	S.I = function(V, ctx, m, v, e) {
+	S.I = function(V, c, m, v, e) {
 		return this[r](/{##(\d)##}([\s\S]*){##\/\1##}/g, function(p, a, b, f) {
 			a = M[+a];
 
@@ -78,11 +79,11 @@ function tmpl(s, c) {
 	/**
 	 * Parse tags ({{abc}}), also look for helper functions
 	 * @param {String} V eval base
-	 * @param {Object} ctx context to look for vars in eval
+	 * @param {Object} c context to look for vars in eval
 	 * @param [t] placeholder
 	 * @returns {RegExp}
 	 */
-	S.T = function(V, ctx, t) {
+	S.T = function(V, c, t) {
 		return this[r](/{+\{ *([A-Za-z0-9_.]+)}}+/g, function(p, $1, f) {
 			try {
 				f = eval(!V.big || $1.match(t=/\./g) ? V+"['"+$1.replace(t, "']['")+"']" : V)
@@ -100,9 +101,7 @@ function tmpl(s, c) {
 		// each
 		.O(c, 1)
 		// vars at level 0
-		.T("ctx", c)
+		.T("c", c)
 		// if's at level 0
-		.I("ctx.", c)
-		// remove whitespace
-		.trim()
+		.I("c.", c)
 }
