@@ -11,14 +11,13 @@ function tmpl(s, c) {
 		i = 0, r;
 
 	// replace ifs with map numbers
-	// TODO: make IF run!
-	s = s[r = "replace"](/(?:{{#if(?: *))(.*)(?: *)}}/g, function(p, a) {
+	s = s[r = "replace"](/\{#if *(.*?) *}/g, function(p, a) {
 		M[i] = a;
-		return '{##'+(i++)+'##}'
+		return '{#'+(i++)+'#}'
 	});
 
 	for(i= M.length;i--;)
-		s = s[r](RegExp('{##'+i+'##}([\\s\\S]*?){{\\/if}}', 'g'), "{##"+i+"##}$1{##/"+ i +"##}");
+		s = s[r](RegExp('{#'+i+'#}([\\s\\S]*?){#\\/if}', 'g'), "{#"+i+"#}$1{#/"+ i +"#}");
 
 	/**
 	 * Parse object
@@ -29,7 +28,7 @@ function tmpl(s, c) {
 	 */
 	S.O = function(c, s, x) {
 		// look for each-tag
-		return this[r](x=/{{(?: *)(\w+)(?: *)}}([\s\S]*?){{\/(?: *)\1(?: *)}}/g, function(p, a, b) {
+		return this[r](x=/{(?: *)(\w+)(?: *)}([\s\S]*?){\/(?: *)\1(?: *)}/g, function(p, a, b) {
 			s = "";
 			if(c[a])
 				// when each is found
@@ -57,7 +56,7 @@ function tmpl(s, c) {
 	 * @returns {RegExp}
 	 */
 	S.I = function(V, c, m, v, e) {
-		return this[r](/{##(\d)##}([\s\S]*){##\/\1##}/g, function(p, a, b, f) {
+		return this[r](/{#(\d)#}([\s\S]*){#\/\1#}/g, function(p, a, b, f) {
 			a = M[+a];
 
 			// match ! or not statement
@@ -70,8 +69,8 @@ function tmpl(s, c) {
 				f = 0
 			}
 
-			return b.match(e = /{{(#+)else}}[\s\S]*/)
-				? b[r](f ? e : /[\s\S]*\{{(#+)else}}/, '')
+			return b.match(e = /{#else}[\s\S]*/)
+				? b[r](f ? e : /[\s\S]*\{#else}/, '')
 				: f ? b : ''
 		});
 	};
@@ -84,7 +83,7 @@ function tmpl(s, c) {
 	 * @returns {RegExp}
 	 */
 	S.T = function(V, c, t) {
-		return this[r](/{+\{ *([A-Za-z0-9_.]+)}}+/g, function(p, $1, f) {
+		return this[r](/{+ *([A-Za-z0-9_.]+)}+/g, function(p, $1, f) {
 			try {
 				f = eval(!V.big || $1.match(t=/\./g) ? V+"['"+$1.replace(t, "']['")+"']" : V)
 			} catch(e) {}
@@ -93,7 +92,7 @@ function tmpl(s, c) {
 			f = f ? f.big ? f : typeof f[$1] != "string" ? p : f[$1] : '';
 
 			// if set, escape {{{ }}} tags
-			return p[2] == '{' ? new Option(f).innerHTML : f
+			return p[1] == '{' ? new Option(f).innerHTML : f
 		})
 	};
 

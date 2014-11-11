@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>templates</title>
+	<style>
+		body { font-family: Courier New, Courier, serif; }
+	</style>
+</head>
+<body>
+	<script src="templates.min.js"></script>
+	<script>
+		var context = {
+			test: 'abc',
+			code: '<div class="test">I am code</div>',
+			show: true,
+			tests: [
+				{ name: '1st test' },
+				{ name: '2nd test' }
+			],
+			animals: [
+				'Raven', 'Crow', 'Def Leppard'
+			]
+		};
+
+		var tpl = tmpl('' +
+		'	<h2>Vars:</h2>' +
+		'	<p>{test}</p>' +
+		'	<h2>Escaped:</h2>' +
+		'	<p>{{code}}</p>' +
+		'	<h2>Conditionals</h2>' +
+		'	<p>' +
+		'		{#if show}' +
+		'			SHOW IT!' +
+		'		{#else}' +
+		'			DONT SHOW!' +
+		'		{#/if}' +
+		'	</p>' +
+		'	<h2>Arrays + Object</h2>' +
+		'	{tests}' +
+		'		<p>{name}</p>' +
+		'	{/tests}' +
+		'	<h2>Arrays</h2>' +
+		'	{animals}' +
+		'		<p>{value}</p>' +
+		'	{/animals}', context);
+
+		document.body.innerHTML = tpl;
+	</script>
+</body>
+</html>
