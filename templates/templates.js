@@ -4,7 +4,7 @@
  * @param {Object} [c] Context object
  * @returns {String}
  */
-function tmpl(s, c) {
+function T(s, c) {
 	var S = String.prototype,
 		// map for if statements
 		M = [],
@@ -13,7 +13,7 @@ function tmpl(s, c) {
 	// replace ifs with map numbers
 	s = s[r = "replace"](/\{#if *(.*?) *}/g, function(p, a) {
 		M[i] = a;
-		return '{#'+(i++)+'#}'
+		return '{#'+i++ +'#}'
 	});
 
 	for(i= M.length;i--;)
@@ -47,7 +47,7 @@ function tmpl(s, c) {
 	};
 
 	/**
-	 * Parse {{#if}} ... {{/if}, {{##if}} ... {{//if}, etc
+	 * Parse {#if} ... {#else} ... {/if}
 	 * @param {String} V eval base
 	 * @param {Object} c context to look for vars in eval
 	 * @param [m] placeholder
@@ -76,7 +76,7 @@ function tmpl(s, c) {
 	};
 
 	/**
-	 * Parse tags ({{abc}}), also look for helper functions
+	 * Parse tags {abc}
 	 * @param {String} V eval base
 	 * @param {Object} c context to look for vars in eval
 	 * @param [t] placeholder
