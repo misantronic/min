@@ -2,22 +2,20 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<title>templates 2</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			font-size: 12px;
-		}
-	</style>
-	<script src="tript.js"></script>
+	<title>tript v.0.1.0</title>
+	<style>body { font-family: Arial, sans-serif; font-size: 12px; }</style>
 
+	<!-- Embed tript -->
+	<script src="tript.min.js"></script>
+
+	<!-- TEMPLATE -->
 	<script id="template" type="text/html">
 		<div id="content">
 			<p>Start of container</p>
 			var tests = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
 			for(var i in tests) {
 				<h1>Headline <% i %></h1>
-				<p>Hallo <% tests[i].name %></p>
+				<pre>Hallo <% tests[i].name %></pre>
 				<p>Test</p>
 			}
 			<p>End of container</p>
@@ -26,6 +24,7 @@
 </head>
 <body>
 	<script>
+		// parse template
 		document.body.innerHTML = T(template.innerHTML);
 	</script>
 </body>
