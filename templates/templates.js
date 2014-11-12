@@ -4,20 +4,11 @@
  * @param {Object} [c] Context object
  * @returns {String}
  */
-function T(s, c) {
+!function() {
 	var S = String.prototype,
 		// map for if statements
 		M = [],
 		i = 0, r = "replace", m = "match";
-
-	// replace ifs with map numbers
-	s = s[r](/\{#if *(.*?) *}/g, function(p, a) {
-		M[i] = a;
-		return '{#'+i++ +'#}'
-	});
-
-	for(i= M.length;i--;)
-		s = s[r](RegExp('{#'+i+'#}([\\s\\S]*?){#\\/if}', 'g'), "{#"+i+"#}$1{#/"+ i +"#}");
 
 	/**
 	 * Parse object
@@ -96,11 +87,22 @@ function T(s, c) {
 		})
 	};
 
-	return s
-		// each
-		.O(c, 1)
-		// vars at level 0
-		.T("c", c)
-		// if's at level 0
-		.I("c.", c)
-}
+	S.tpl = function(c, s) {
+		// replace ifs with map numbers
+		s = this[r](/\{#if *(.*?) *}/g, function(p, a) {
+			M[i] = a;
+			return '{#'+i++ +'#}'
+		});
+
+		for(i= M.length;i--;)
+			s = s[r](RegExp('{#'+i+'#}([\\s\\S]*?){#\\/if}', 'g'), "{#"+i+"#}$1{#/"+ i +"#}");
+
+		return s
+			// each
+			.O(c, 1)
+			// vars at level 0
+			.T("c", c)
+			// if's at level 0
+			.I("c.", c)
+	}
+}();
