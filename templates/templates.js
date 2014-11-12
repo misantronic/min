@@ -34,7 +34,7 @@
 					s[m](x) && (s = s.O(c[a][i]));
 
 			return s
-		});
+		})
 	};
 
 	/**
@@ -52,7 +52,7 @@
 
 			// match ! or not statement
 			w = a[m](/^!|^not */); v = V;
-			if(w) a = a[r](w[0], ""), v = '!'+v;
+			if(w) a = a[r](w[0], ""), v = "!"+v;
 
 			try {
 				f = eval(v+a)
@@ -61,9 +61,9 @@
 			}
 
 			return b[m](e = /{#else}[\s\S]*/)
-				? b[r](f ? e : /[\s\S]*\{#else}/, '')
-				: f ? b : ''
-		});
+				? b[r](f ? e : /[\s\S]*\{#else}/, "")
+				: f ? b : ""
+		})
 	};
 
 	/**
@@ -80,10 +80,10 @@
 			} catch(e) {}
 
 			// return string or object or tag itself, if the value is not a string
-			f = f ? f.big ? f : typeof f[$1] != "string" ? p : f[$1] : '';
+			f = f ? f.big ? f : typeof f[$1] != "string" ? p : f[$1] : "";
 
 			// if set, escape {{{ }}} tags
-			return p[1] == '{' ? new Option(f).innerHTML : f
+			return p[1] == "{" ? new Option(f).innerHTML : f
 		})
 	};
 
@@ -91,18 +91,18 @@
 		// replace ifs with map numbers
 		s = this[r](/\{#if *(.*?) *}/g, function(p, a) {
 			M[i] = a;
-			return '{#'+i++ +'#}'
+			return "{#"+i++ +"#}"
 		});
 
 		for(i= M.length;i--;)
-			s = s[r](RegExp('{#'+i+'#}([\\s\\S]*?){#\\/if}', 'g'), "{#"+i+"#}$1{#/"+ i +"#}");
+			s = s[r](RegExp("{#"+i+"#}([\\s\\S]*?){#\\/if}", "g"), "{#"+i+"#}$1{#/"+ i +"#}");
 
 		return s
 			// each
 			.O(c, 1)
 			// vars at level 0
 			.T("c", c)
-			// if's at level 0
+			// ifs at level 0
 			.I("c.", c)
 	}
 }();
