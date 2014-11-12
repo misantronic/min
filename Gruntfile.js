@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				files: {
 					'hyperhydration/hyperhydration.min.js'	: ['hyperhydration/hyperhydration.js'],
 					'templates/templates.min.js'			: ['templates/templates.js'],
-					'templates2/templates2.min.js'			: ['templates2/templates2.js']
+					'tript/tript.min.js'					: ['tript/tript.js']
 				//	'invasion/invasion.min.js'				: ['invasion/invasion.js']
 				}
 			}
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 				files: [
 					{
 						'templates/templates.packed.js'		: ['templates/templates.min.js'],
-						'templates2/templates2.packed.js'	: ['templates2/templates2.min.js']
+						'tript/tript.packed.js'	: ['tript/tript.min.js']
 					}
 				]
 			}

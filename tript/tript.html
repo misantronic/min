@@ -9,29 +9,24 @@
 			font-size: 12px;
 		}
 	</style>
-	<script src="templates2.js"></script>
+	<script src="tript.js"></script>
 
-	<script id="template2" type="text/html">
+	<script id="template" type="text/html">
 		<div id="content">
+			<p>Start of container</p>
 			var tests = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
 			for(var i in tests) {
 				<h1>Headline <% i %></h1>
 				<p>Hallo <% tests[i].name %></p>
-				<p>Test
-				</p>
+				<p>Test</p>
 			}
 			<p>End of container</p>
 		</div>
 	</script>
-
-	<script>
-		window.onload = function() {
-			// templates #2
-			document.body.innerHTML = template2.innerHTML.tpl();
-		}
-	</script>
 </head>
 <body>
-
+	<script>
+		document.body.innerHTML = T(template.innerHTML);
+	</script>
 </body>
 </html>
