@@ -9,8 +9,6 @@
 			font-size: 12px;
 		}
 	</style>
-</head>
-<body>
 	<script src="templates.min.js"></script>
 	<script id="template" type="text/html">
 		<h2>Var</h2>
@@ -22,28 +20,39 @@
 		<h2>Conditionals</h2>
 		<p>
 			{#if show}
-				SHOW IT!
+			SHOW IT!
 			{#else}
-				DONT SHOW!
+			DONT SHOW!
 			{#/if}
 		</p>
 		<p>
 			{#if ! show}
-				SHOW IT!
+			SHOW IT!
 			{#else}
-				DONT SHOW!
+			DONT SHOW!
 			{#/if}
 		</p>
 
 		<h2>Array + Object</h2>
 		{tests}
-			<p>{name}</p>
+		<p>{name}</p>
 		{/tests}
 
 		<h2>Array</h2>
 		{animals}
-			<p>{value}</p>
+		<p>{value}</p>
 		{/animals}
+	</script>
+
+	<script id="template2" type="text/html">
+		<div id="content">
+			var tests = [ 1, 2, 3 ];
+			for(var i=0; i < tests.length; i++) {
+				<h1>Headline <% i %></h1>
+				<p>Description</p>
+			}
+			<p>Outro!</p>
+		</div>
 	</script>
 
 	<script>
@@ -60,7 +69,57 @@
 			]
 		};
 
-		document.body.innerHTML = template.innerHTML.tpl(context);
+		window.onload = function() {
+			// templates #1
+			document.body.innerHTML = template.innerHTML.tpl(context);
+
+			// templates #2
+			var t = template2.innerHTML;
+			var M = [];
+			var i = 0;
+
+			t = t.replace(/\<[^%/](.*?)>/g, function(p, a) {
+				M.push(p);
+				return "{#"+i++ +"#}"
+			});
+
+			for(i= M.length;i--;)
+				t = t.replace(RegExp("{#"+i+"#}([\\s\\S]*?)<\/(\\w+)>", "g"), "{#"+i+"#}$1{#/"+ i +"#}");
+
+			t = "var _ = '';" + t;
+
+			t = t.replace(/{#(\d)#}(.*){#\/\1#}/g, function(p, $1, $2) {
+				return '_ += "'+ M[$1] + $2 + M[$1].replace(/<(.*?) *>/, "</$1>")  +'";';
+			});
+
+			t = t.replace(/{#(\d)#}/g, function(p, $1) {
+				return '_ += "'+ M[$1]  +'";';
+			});
+
+			t = t.replace(/{#\/(\d)#}/g, function(p, $2) {
+				return '_ += "'+ M[$2].replace(/<(.*?) *>/, "</$1>")  +'";';
+			});
+
+			/*t = t.replace(/{#(\d)#}/g, function(p, $1) {
+				console.log(p)
+
+
+//				p = p.replace(new RegExp("{#"+ $1 +"#}$", "gm"), function(p2, $2) {
+//					return '_ += "'+ M[$1] +'";';
+//				});
+
+				//p = p.replace(/<%(.*)%>/, '"+ $1 +"');
+
+				return p;
+			});*/
+
+			console.log(t);
+
+			//document.body.innerHTML += eval(t);
+		}
 	</script>
+</head>
+<body>
+
 </body>
 </html>
