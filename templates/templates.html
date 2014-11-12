@@ -44,17 +44,6 @@
 		{/animals}
 	</script>
 
-	<script id="template2" type="text/html">
-		<div id="content">
-			var tests = [ 1, 2, 3 ];
-			for(var i=0; i < tests.length; i++) {
-				<h1>Headline <% i %></h1>
-				<p>Description</p>
-			}
-			<p>Outro!</p>
-		</div>
-	</script>
-
 	<script>
 		var context = {
 			test: 'abc',
@@ -72,50 +61,6 @@
 		window.onload = function() {
 			// templates #1
 			document.body.innerHTML = template.innerHTML.tpl(context);
-
-			// templates #2
-			var t = template2.innerHTML;
-			var M = [];
-			var i = 0;
-
-			t = t.replace(/\<[^%/](.*?)>/g, function(p, a) {
-				M.push(p);
-				return "{#"+i++ +"#}"
-			});
-
-			for(i= M.length;i--;)
-				t = t.replace(RegExp("{#"+i+"#}([\\s\\S]*?)<\/(\\w+)>", "g"), "{#"+i+"#}$1{#/"+ i +"#}");
-
-			t = "var _ = '';" + t;
-
-			t = t.replace(/{#(\d)#}(.*){#\/\1#}/g, function(p, $1, $2) {
-				return '_ += "'+ M[$1] + $2 + M[$1].replace(/<(.*?) *>/, "</$1>")  +'";';
-			});
-
-			t = t.replace(/{#(\d)#}/g, function(p, $1) {
-				return '_ += "'+ M[$1]  +'";';
-			});
-
-			t = t.replace(/{#\/(\d)#}/g, function(p, $2) {
-				return '_ += "'+ M[$2].replace(/<(.*?) *>/, "</$1>")  +'";';
-			});
-
-			/*t = t.replace(/{#(\d)#}/g, function(p, $1) {
-				console.log(p)
-
-
-//				p = p.replace(new RegExp("{#"+ $1 +"#}$", "gm"), function(p2, $2) {
-//					return '_ += "'+ M[$1] +'";';
-//				});
-
-				//p = p.replace(/<%(.*)%>/, '"+ $1 +"');
-
-				return p;
-			});*/
-
-			console.log(t);
-
-			//document.body.innerHTML += eval(t);
 		}
 	</script>
 </head>
