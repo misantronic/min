@@ -8,10 +8,10 @@ function T(s, c) {
 	var S = String.prototype,
 		// map for if statements
 		M = [],
-		i = 0, r;
+		i = 0, r = "replace", m = "match";
 
 	// replace ifs with map numbers
-	s = s[r = "replace"](/\{#if *(.*?) *}/g, function(p, a) {
+	s = s[r](/\{#if *(.*?) *}/g, function(p, a) {
 		M[i] = a;
 		return '{#'+i++ +'#}'
 	});
@@ -40,7 +40,7 @@ function T(s, c) {
 					s = s.I("c."+a+"["+i+"].", c),
 
 						// check for another each
-					s.match(x) && (s = s.O(c[a][i]));
+					s[m](x) && (s = s.O(c[a][i]));
 
 			return s
 		});
@@ -50,18 +50,18 @@ function T(s, c) {
 	 * Parse {#if} ... {#else} ... {/if}
 	 * @param {String} V eval base
 	 * @param {Object} c context to look for vars in eval
-	 * @param [m] placeholder
+	 * @param [w] placeholder
 	 * @param [v] placeholder
 	 * @param [e] placeholder
 	 * @returns {RegExp}
 	 */
-	S.I = function(V, c, m, v, e) {
+	S.I = function(V, c, w, v, e) {
 		return this[r](/{#(\d)#}([\s\S]*){#\/\1#}/g, function(p, a, b, f) {
 			a = M[+a];
 
 			// match ! or not statement
-			m = a.match(/(^!|^not) */); v = V;
-			if(m) a = a.replace(m[0], ""), v = '!'+v;
+			w = a[m](/^!|^not */); v = V;
+			if(w) a = a[r](w[0], ""), v = '!'+v;
 
 			try {
 				f = eval(v+a)
@@ -69,7 +69,7 @@ function T(s, c) {
 				f = 0
 			}
 
-			return b.match(e = /{#else}[\s\S]*/)
+			return b[m](e = /{#else}[\s\S]*/)
 				? b[r](f ? e : /[\s\S]*\{#else}/, '')
 				: f ? b : ''
 		});
@@ -85,7 +85,7 @@ function T(s, c) {
 	S.T = function(V, c, t) {
 		return this[r](/{+ *([A-Za-z0-9_.]+)}+/g, function(p, $1, f) {
 			try {
-				f = eval(!V.big || $1.match(t=/\./g) ? V+"['"+$1.replace(t, "']['")+"']" : V)
+				f = eval(!V.big || $1[m](t=/\./g) ? V+"['"+$1[r](t, "']['")+"']" : V)
 			} catch(e) {}
 
 			// return string or object or tag itself, if the value is not a string
