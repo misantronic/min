@@ -5,15 +5,17 @@
  * @constructor
  */
 function T(t) {
-	var M = [], i = 0, r = 'replace';
+	var M = [], i = 0, r = "replace";
 
 	t = t[r](/<[^%/].*?>/g, function(p) {
 		M[i]=p;
 		return "#"+i++ +"#"
 	});
 
+	//console.log(t);
+
 	for(i= M.length;i--;)
-		t = t[r](RegExp("#("+i+")#([\\s\\S]*?)<\/\\w+>", "g"), "#$1#$2#/$1#");
+		t = t[r](RegExp("#("+i+")#([\\s\\S]*?)<\/.+>", "g"), "#$1#$2#/$1#");
 
 	//console.log(t);
 
@@ -25,7 +27,7 @@ function T(t) {
 		[r](/#(\d)#/g, function(p, a) {
 			return '_+="'+ M[a][r](/"/g, '\\"') +'";';
 		})
-		[r](/#\/(\d)#/g, function(p, b) {
-			return '_+="'+ M[b][r](/<(.+) .*>/, "</$1>") +'";';
+		[r](/#\/(\d)#/g, function(p, a) {
+			return '_+="</'+ M[a].match(/<(\w+)/)[1] +'>";';
 		}))
 }

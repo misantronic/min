@@ -14,7 +14,9 @@
 			<p>Start of container</p>
 			var tests = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
 			for(var i in tests) {
-				<h1>Headline <% i %></h1>
+				<h1>
+					<b>Headline <% i %></b>
+				</h1>
 				<pre>Hallo <% tests[i].name %></pre>
 				<p>Test</p>
 			}
