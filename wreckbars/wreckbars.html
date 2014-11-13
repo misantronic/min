@@ -9,7 +9,7 @@
 			font-size: 12px;
 		}
 	</style>
-	<script src="templates.min.js"></script>
+	<script src="wreckbars.min.js"></script>
 	<script id="template" type="text/html">
 		<h2>Var</h2>
 		<p>{test}</p>
@@ -20,27 +20,27 @@
 		<h2>Conditionals</h2>
 		<p>
 			{#if show}
-			SHOW IT!
+				SHOW IT!
 			{#else}
-			DONT SHOW!
+				DONT SHOW!
 			{#/if}
 		</p>
 		<p>
 			{#if ! show}
-			SHOW IT!
+				SHOW IT!
 			{#else}
-			DONT SHOW!
+				DONT SHOW!
 			{#/if}
 		</p>
 
 		<h2>Array + Object</h2>
 		{tests}
-		<p>{name}</p>
+			<p>{name}</p>
 		{/tests}
 
 		<h2>Array</h2>
 		{animals}
-		<p>{value}</p>
+			<p>{value}</p>
 		{/animals}
 	</script>
 
