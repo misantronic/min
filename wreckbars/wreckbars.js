@@ -19,7 +19,7 @@
 	 */
 	S.O = function(c, s, x) {
 		// look for each-tag
-		return this[r](x=/{(?: *)(\w+)(?: *)}([\s\S]*?){\/(?: *)\1(?: *)}/g, function(p, a, b) {
+		return this[r](x=/{ *(\w+) *}([\s\S]*?){\/ *\1 *}/g, function(p, a, b) {
 			s = "";
 			if(c[a])
 				// when each is found
@@ -74,7 +74,7 @@
 	 * @returns {RegExp}
 	 */
 	S.T = function(V, c, t) {
-		return this[r](/{+ *([A-Za-z0-9_.]+)}+/g, function(p, $1, f) {
+		return this[r](/{+ *([A-Za-z0-9_.]+) *}+/g, function(p, $1, f) {
 			try {
 				f = eval(!V.big || $1[m](t=/\./g) ? V+"['"+$1[r](t, "']['")+"']" : V)
 			} catch(e) {}
