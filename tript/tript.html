@@ -6,20 +6,25 @@
 	<style>body { font-family: Arial, sans-serif; font-size: 12px; }</style>
 
 	<!-- Embed tript -->
-	<script src="tript.min.js"></script>
+	<script src="tript.js"></script>
 
 	<!-- TEMPLATE -->
 	<script id="template" type="text/html">
 		<div id="content">
 			<p>Start of container</p>
+
 			var tests = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
+			var _animal = "Crow";
+
 			for(var i in tests) {
 				<h1>
-					<b>Headline <% i %> for <% name %></b>
+					<b>Headline $i for $user</b>
 				</h1>
 				<pre>Hallo <% tests[i].name %></pre>
-				<p>Test <% i %></p>
+				<p>Test $i</p>
 			}
+
+			<p>The Animal: $_animal</p>
 			<p>End of container</p>
 		</div>
 	</script>
@@ -27,10 +32,10 @@
 <body>
 	<script>
 		var context = {
-			name: 'David Skx'
+			user: 'David Skx'
 		};
 		// parse template
-		document.body.innerHTML = T(template.innerHTML);
+		document.body.innerHTML = T(template.innerHTML, context);
 	</script>
 </body>
 </html>
