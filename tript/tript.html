@@ -15,10 +15,10 @@
 			var tests = [ { name: 'David' }, { name: 'Max' }, { name: 'Bob' } ];
 			for(var i in tests) {
 				<h1>
-					<b>Headline <% i %></b>
+					<b>Headline <% i %> for <% name %></b>
 				</h1>
 				<pre>Hallo <% tests[i].name %></pre>
-				<p>Test</p>
+				<p>Test <% i %></p>
 			}
 			<p>End of container</p>
 		</div>
@@ -26,8 +26,11 @@
 </head>
 <body>
 	<script>
+		var context = {
+			name: 'David Skx'
+		};
 		// parse template
-		document.body.innerHTML = T(template.innerHTML);
+		document.body.innerHTML = T(template.innerHTML, context);
 	</script>
 </body>
 </html>
