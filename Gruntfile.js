@@ -26,8 +26,7 @@ module.exports = function(grunt) {
 				},
 				files: [
 					{
-						'wreckbars/wreckbars.packed.js'		: ['wreckbars/wreckbars.min.js'],
-						'tript/tript.packed.js'				: ['tript/tript.min.js']
+						'wreckbars/wreckbars.packed.js'		: ['wreckbars/wreckbars.min.js']
 					}
 				]
 			}
