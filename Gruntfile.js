@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 			projects: {
 				files: {
 					'hyperhydration/hyperhydration.min.js'	: ['hyperhydration/hyperhydration.js'],
-					'templates/templates.min.js'			: ['templates/templates.js'],
+					'wreckbars/wreckbars.min.js'			: ['wreckbars/wreckbars.js'],
 					'tript/tript.min.js'					: ['tript/tript.js']
 				//	'invasion/invasion.min.js'				: ['invasion/invasion.js']
 				}
@@ -26,8 +26,8 @@ module.exports = function(grunt) {
 				},
 				files: [
 					{
-						'templates/templates.packed.js'		: ['templates/templates.min.js'],
-						'tript/tript.packed.js'	: ['tript/tript.min.js']
+						'wreckbars/wreckbars.packed.js'		: ['wreckbars/wreckbars.min.js'],
+						'tript/tript.packed.js'				: ['tript/tript.min.js']
 					}
 				]
 			}
