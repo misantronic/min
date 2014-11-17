@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				files: {
 					'hyperhydration/hyperhydration.min.js'	: ['hyperhydration/hyperhydration.js'],
 					'wreckbars/wreckbars.min.js'			: ['wreckbars/wreckbars.js'],
-					'tript/tript.min.js'					: ['tript/tript.js']
+					'minclude/minclude.min.js'				: ['minclude/minclude.js']
 				//	'invasion/invasion.min.js'				: ['invasion/invasion.js']
 				}
 			}
