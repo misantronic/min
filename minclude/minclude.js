@@ -1,13 +1,14 @@
 /**
  *
- * @param {Array|String} a
- * @param {String} [c]
+ * @param {Array|String} a Array or String containing the URL/Path to scripts
+ * @param {Array|String} [c] Alternative Array or String containing the URL/Path to scripts
  * @param [i] placeholder
- * @returns {Minclude}
+ * @returns {Promise}
  * @constructor
  */
 Minclude = function(a, c, i) {
 	if(a.big) a = [a];
+	if(c.big) c = [c];
 	return new Promise(
 		function(r) {
 			/**

@@ -2,7 +2,7 @@
 
 > The tiny require.js-alternative (~300 bytes) for modern browsers
 
-Minclude is a lightweight file- and module-loader making it super-easy to dynammically embed your scripts.
+Minclude is a lightweight file- and module-loader making it super-easy to dynamically embed your scripts.
 You simply pass an array with your scripts and optionally another array with fallback-scripts to `Minclude`. That's it.
  
 #### Example
