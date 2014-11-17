@@ -1,12 +1,13 @@
 /**
  *
- * @param {Array} a
+ * @param {Array|String} a
  * @param {String} [c]
  * @param [i] placeholder
  * @returns {Minclude}
  * @constructor
  */
 Minclude = function(a, c, i) {
+	if(a.big) a = [a];
 	return new Promise(
 		function(r) {
 			/**
