@@ -1,6 +1,6 @@
 ### Minclude
 
-> The tiny require.js-alternative (~300 bytes) for modern browsers
+> The tiny require.js-alternative (~300 bytes) for modern browsers.
 
 Minclude is a lightweight file- and module-loader making it super-easy to dynamically embed your scripts.
 You simply pass an array with your scripts and optionally another array with fallback-scripts to `Minclude`. That's it.
@@ -25,5 +25,5 @@ Minclude(
 
 #### Cross-browser
 
-Minclude is optimized for modern browsers who natively support [Promises](http://caniuse.com/#feat=promises)<br>
+Minclude is optimized for modern browsers who natively support [Promises](http://caniuse.com/#feat=promises).<br>
 However, there are [polyfills](https://github.com/jakearchibald/es6-promise) for IE available.
