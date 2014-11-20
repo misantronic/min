@@ -5,7 +5,7 @@
 Minclude is a lightweight fileloader (286 bytes) making it super-easy to dynamically embed your scripts.
 You simply pass an array with your scripts and optionally another array with fallback-scripts to `Minclude`. That's it.
  
-#### Example
+#### See how it's done
  
 ```javascript
 Minclude(
