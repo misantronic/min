@@ -33,4 +33,6 @@ Minclude( '//code.jquery.com/jquery-2.1.0.js', 'lib/jquery-2.1.0.js' );
 #### Cross-browser
 
 Minclude is optimized for modern browsers who natively support [Promises](http://caniuse.com/#feat=promises).<br>
-However, there are [polyfills](https://github.com/jakearchibald/es6-promise) for IE available.
+However, there are [polyfills](https://github.com/jakearchibald/es6-promise) for IE available.<br>
+<br>
+<img src="http://i.picresize.com/images/2014/11/20/ISiqt.jpg" style="max-width: 100%">
