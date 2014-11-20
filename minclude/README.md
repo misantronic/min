@@ -1,8 +1,8 @@
 ### Minclude
 
-> The tiny require.js-alternative (~300 bytes) for modern browsers.
+> The tiny require.js-alternative for modern browsers.
 
-Minclude is a lightweight file- and module-loader making it super-easy to dynamically embed your scripts.
+Minclude is a lightweight file- and module-loader (286 bytes) making it super-easy to dynamically embed your scripts.
 You simply pass an array with your scripts and optionally another array with fallback-scripts to `Minclude`. That's it.
  
 #### Example
@@ -21,6 +21,12 @@ Minclude(
 	// entry point
 	myCoolApp.init();
 });
+```
+
+or you might just pass a string:
+
+```javascript
+Minclude( '//code.jquery.com/jquery-2.1.0.js', 'lib/jquery-2.1.0.js' );
 ```
 
 #### Cross-browser
