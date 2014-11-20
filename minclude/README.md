@@ -1,8 +1,8 @@
 ### Minclude
 
-> A tiny fileloader for modern browsers.
+> A tiny JavaScript-loader for modern browsers.
 
-Minclude is a lightweight fileloader (286 bytes) making it super-easy to dynamically embed your scripts.
+Minclude is a lightweight JavaScript-loader (286 bytes) making it super-easy to dynamically embed your scripts.
 You simply pass an array with your scripts and optionally another array with fallback-scripts to `Minclude`. That's it.
  
 #### See how it's done
