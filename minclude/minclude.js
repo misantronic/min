@@ -1,14 +1,12 @@
 /**
  *
- * @param {Array|String} a Array or String containing the URL/Path to scripts
- * @param {Array|String} [b] Alternative Array or String containing the URL/Path to scripts
+ * @param {Array} a An Array containing the URLs/Paths to your scripts
+ * @param {Array} [b] An Array containing the URLs/Paths to you fallback-scripts
  * @param [i] placeholder
  * @returns {Function}
  * @constructor
  */
 Minclude = function(a, b, i) {
-	if(a.big) a = [a];
-	if(b.big) b = [b];
 	return (function _(r) {
 		_.done = function(c) {
 			r = c

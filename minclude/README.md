@@ -2,7 +2,7 @@
 
 > A tiny JavaScript-loader for modern browsers.
 
-Minclude is a lightweight JavaScript-loader (313 bytes) making it super-easy to dynamically embed your scripts.
+Minclude is a lightweight JavaScript-loader (283 bytes) making it super-easy to dynamically embed your scripts.
 You simply pass an array with your scripts to `Minclude`. That's it.<br>
 If you load your scripts from a CDN, you can optionally add another array with fallback-scripts.
  
@@ -22,12 +22,6 @@ Minclude(
 	// entry point
 	myCoolApp.init();
 });
-```
-
-or you might just pass a string:
-
-```javascript
-Minclude( '//code.jquery.com/jquery-2.1.0.js', 'lib/jquery-2.1.0.js' );
 ```
 
 #### Cross-browser
